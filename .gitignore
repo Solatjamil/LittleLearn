@@ -32,3 +32,4 @@ index.backup.html
 .arena/
 DEPLOY_KEY.txt
 .ssh/
+.npm/

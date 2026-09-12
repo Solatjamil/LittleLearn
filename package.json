@@ -1,27 +1,38 @@
 {
   "name": "littlelearn",
-  "version": "1.0.0",
-  "description": "LittleLearn — Eye-Safe Kindergarten Learning (offline-first, PWA + Android via Capacitor)",
+  "version": "1.2.0",
+  "description": "LittleLearn — Eye-Safe Kindergarten Learning (offline-first, PWA + Android via Capacitor) — Production",
   "type": "module",
   "scripts": {
-    "dev": "npx serve . -l 5173 --cors",
-    "preview": "npx serve . -l 4173",
-    "cap:init": "npx cap init LittleLearn com.littlelearn.kids --web-dir=.",
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "serve": "python3 -m http.server 5173 --bind 0.0.0.0",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "build": "vite build",
+    "pwa:build": "vite build && npx workbox generateSW workbox-config.cjs",
+    "cap:init": "npx cap init LittleLearn com.littlelearn.kids --web-dir=dist",
     "cap:add:android": "npx cap add android",
     "cap:sync": "npx cap sync",
     "cap:open:android": "npx cap open android",
-    "cap:build": "npx cap sync android && npx cap open android",
+    "cap:build": "npm run build && npx cap sync android && npx cap open android",
     "android:debug": "cd android && ./gradlew assembleDebug",
-    "android:release": "cd android && ./gradlew assembleRelease"
+    "android:release": "cd android && ./gradlew assembleRelease",
+    "lint": "eslint src --ext .js,.ts",
+    "test": "vitest run",
+    "test:e2e": "playwright test"
   },
-  "keywords": ["education", "kids", "pwa", "offline-first", "capacitor", "eye-care"],
+  "keywords": ["education","kids","pwa","offline-first","capacitor","eye-care","kindergarten","early-learning"],
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "@capacitor/android": "^6.1.0",
     "@capacitor/cli": "^6.1.0",
-    "@capacitor/core": "^6.1.0"
+    "@capacitor/core": "^6.1.0",
+    "vite": "^5.4.0",
+    "vite-plugin-pwa": "^0.19.0",
+    "workbox-cli": "^7.1.0",
+    "vitest": "^1.6.0",
+    "playwright": "^1.44.0",
+    "eslint": "^9.0.0"
   },
-  "capacitor": {
-    "bundledWebRuntime": false
-  }
+  "capacitor": { "bundledWebRuntime": false }
 }
