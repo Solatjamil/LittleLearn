@@ -1,0 +1,28 @@
+{
+  "note": "Seed illustrates deterministic activity_id hashing per spec: hash(generator_params) → repeatable instance",
+  "sample_activity_instances": [
+    {
+      "activity_id": "abc_land_A_trace_arrow-guided_001",
+      "module_id": "abc_land",
+      "generator": "letter_phonics_v1",
+      "params": { "letter": "A", "word": "Apple", "tracing": "arrow-guided", "interaction": "trace" },
+      "age_tier": "3-4",
+      "asset_ref": "assets/abc_land/audio/A_apple.mp3"
+    },
+    {
+      "activity_id": "count_play_apple_3_grid_tap_042",
+      "module_id": "count_and_play",
+      "generator": "counting_engine_v1",
+      "params": { "object": "apple", "count": 3, "layout": "grid", "interaction": "tap_to_count" },
+      "age_tier": "3-4",
+      "deterministic_hash": "a3f9c2"
+    },
+    {
+      "activity_id": "shape_detective_hexagon_beach_by_shape_117",
+      "module_id": "shape_detective",
+      "generator": "shape_engine_v1",
+      "params": { "shape": "hexagon", "scene": "beach", "rule": "by_shape" },
+      "age_tier": "4-5"
+    }
+  ]
+}

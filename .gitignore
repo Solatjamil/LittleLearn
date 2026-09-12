@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+dist/
+build/
+.next/
+out/
+.cache/
+.parcel-cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Android (optional - keep config, ignore built artifacts)
+android/app/build/
+android/.gradle/
+android/local.properties
+android/*.keystore
+android/*.jks
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.ssh/
+index.backup.html
+.arena/
+DEPLOY_KEY.txt
+.ssh/

@@ -1,0 +1,23 @@
+{
+  "appId": "com.littlelearn.kids",
+  "appName": "LittleLearn",
+  "webDir": ".",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1200,
+      "backgroundColor": "#FFF7ED"
+    },
+    "StatusBar": {
+      "style": "LIGHT",
+      "backgroundColor": "#FFF7ED"
+    }
+  },
+  "android": {
+    "backgroundColor": "#FFF7ED",
+    "allowMixedContent": true
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-09-12",
+  "target_instances": 5200,
+  "modules": [
+    {
+      "module_id": "abc_land",
+      "display_name": "ABC Land",
+      "category": "literacy",
+      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "activity_generator": "letter_phonics_v1",
+      "asset_bundle": "assets/abc_land/",
+      "generator_spec": {
+        "generator_id": "letter_phonics_v1",
+        "parameters": {
+          "letter_pool": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          "phonics_word_pool": ["Apple","Ball","Cat","Dog","Egg","Fish","Grape","Hat","Ice","Jam","Kite","Lion","Moon","Nest","Orange","Pen","Queen","Rain","Sun","Tree","Umbrella","Van","Whale","Xylophone","Yacht","Zebra"],
+          "tracing_patterns": ["dotted","arrow-guided","freehand"],
+          "interaction_types": ["trace","tap_sound","match_case"]
+        },
+        "instance_formula": "26 letters × 3 tracing × 3 interaction = 234 base × 5 age variants",
+        "approx_instances": 380
+      }
+    },
+    {
+      "module_id": "count_and_play",
+      "display_name": "Count & Play",
+      "category": "numeracy",
+      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "activity_generator": "counting_engine_v1",
+      "asset_bundle": "assets/count_and_play/",
+      "generator_spec": {
+        "generator_id": "counting_engine_v1",
+        "parameters": {
+          "object_pool": ["apple","star","duck","block","flower","bee","strawberry","car","shell","leaf"],
+          "count_range_by_tier": { "3-4": [1, 5], "4-5": [1, 10], "5-6": [1, 20] },
+          "layout_variants": ["grid","scattered","line","circle"],
+          "interaction_types": ["tap_to_count","drag_to_group","select_matching_number"]
+        },
+        "instance_formula": "10 objects × ~15 counts × 4 layouts × 3 interactions ≈ 1200",
+        "approx_instances": 520
+      }
+    },
+    {
+      "module_id": "animal_kingdom",
+      "display_name": "Animal Kingdom",
+      "category": "nature",
+      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "activity_generator": "creature_sound_v1",
+      "asset_bundle": "assets/animal_kingdom/",
+      "generator_spec": {
+        "parameters": {
+          "creature_pool": ["lion","elephant","monkey","zebra","giraffe","panda","tiger","bear","kangaroo","penguin"],
+          "sound_variants": ["roar","trumpet","chatter","bray","hum","growl"],
+          "habitat_scenes": ["jungle","savanna","arctic","forest"],
+          "quiz_variants": ["match_sound","match_habitat","name_it"]
+        },
+        "approx_instances": 420
+      }
+    },
+    {
+      "module_id": "shape_detective",
+      "display_name": "Shape Detective",
+      "category": "cognitive",
+      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "activity_generator": "shape_engine_v1",
+      "asset_bundle": "assets/shape_detective/",
+      "generator_spec": {
+        "parameters": {
+          "shape_pool": ["circle","square","triangle","star","hexagon","diamond","oval","rectangle"],
+          "hidden_in_scenes": ["park","classroom","kitchen","beach"],
+          "sorting_rules": ["by_shape","by_color","by_size"]
+        },
+        "approx_instances": 360
+      }
+    },
+    {
+      "module_id": "memory_match",
+      "display_name": "Memory Match",
+      "category": "cognitive",
+      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "activity_generator": "memory_engine_v1",
+      "asset_bundle": "assets/memory_match/",
+      "generator_spec": {
+        "parameters": {
+          "theme_decks": ["animals","fruits","vehicles","shapes"],
+          "grid_sizes": [4, 6, 8, 12]
+        },
+        "approx_instances": 180
+      }
+    }
+  ],
+  "content_volume_plan": {
+    "literacy": 1200,
+    "numeracy": 1200,
+    "nature": 1000,
+    "cognitive": 1200,
+    "life_skills": 600,
+    "total": 5200
+  }
+}
