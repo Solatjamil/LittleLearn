@@ -1,5 +1,6 @@
 {
-  "note": "Seed illustrates deterministic activity_id hashing per spec: hash(generator_params) → repeatable instance",
+  "version": "1.3.0",
+  "note": "Deterministic activity_id = hash(generator_params) → repeatable, offline, spaced-repetition ready. 20 samples = 1 per module, covers all engines.",
   "sample_activity_instances": [
     {
       "activity_id": "abc_land_A_trace_arrow-guided_001",
@@ -11,11 +12,95 @@
     },
     {
       "activity_id": "count_play_apple_3_grid_tap_042",
-      "module_id": "count_and_play",
+      "module_id": "count_play",
       "generator": "counting_engine_v1",
       "params": { "object": "apple", "count": 3, "layout": "grid", "interaction": "tap_to_count" },
       "age_tier": "3-4",
       "deterministic_hash": "a3f9c2"
+    },
+    {
+      "activity_id": "animal_kingdom_lion_roar_savanna_008",
+      "module_id": "animal_kingdom",
+      "generator": "creature_sound_v1",
+      "params": { "creature": "lion", "sound": "roar", "habitat": "savanna", "quiz": "match_sound" },
+      "age_tier": "3-4"
+    },
+    {
+      "activity_id": "bird_buddies_parrot_squawk_forest_match_012",
+      "module_id": "bird_buddies",
+      "generator": "creature_sound_v1",
+      "params": { "creature": "parrot", "sound": "squawk", "habitat": "forest", "quiz": "match_sound" },
+      "age_tier": "4-5"
+    },
+    {
+      "activity_id": "color_splash_rainbow_tap_fill_004",
+      "module_id": "color_splash",
+      "generator": "coloring_engine_v1",
+      "params": { "sheet": "rainbow", "palette": "8colors", "interaction": "tap_fill" },
+      "age_tier": "3-4"
+    },
+    {
+      "activity_id": "write_me_M_ghost_freehand_021",
+      "module_id": "write_me",
+      "generator": "tracing_engine_v1",
+      "params": { "glyph": "M", "guide": "ghost", "interaction": "freehand" },
+      "age_tier": "5-6"
+    },
+    {
+      "activity_id": "story_time_leo_star_page2_readalong_002",
+      "module_id": "story_time",
+      "generator": "story_engine_v1",
+      "params": { "book": "b1", "page": 2, "read_along": true },
+      "age_tier": "4-5"
+    },
+    {
+      "activity_id": "rhyme_time_at_hat_match_007",
+      "module_id": "rhyme_time",
+      "generator": "rhyme_engine_v1",
+      "params": { "family": "-at", "pair": "cat/hat", "interaction": "match_rhyme" },
+      "age_tier": "5-6"
+    },
+    {
+      "activity_id": "body_senses_eyes_see_match_003",
+      "module_id": "body_senses",
+      "generator": "body_engine_v1",
+      "params": { "part": "eyes", "sense": "see" },
+      "age_tier": "3-4"
+    },
+    {
+      "activity_id": "weather_rainy_coat_match_005",
+      "module_id": "weather",
+      "generator": "weather_engine_v1",
+      "params": { "weather": "rainy", "clothing": "raincoat", "season": "winter" },
+      "age_tier": "3-4"
+    },
+    {
+      "activity_id": "emotions_sad_hug_scenario_009",
+      "module_id": "emotions",
+      "generator": "emotions_engine_v1",
+      "params": { "feeling": "sad", "scenario": "fall_down", "response": "hug" },
+      "age_tier": "4-5"
+    },
+    {
+      "activity_id": "helpers_doctor_stethoscope_match_006",
+      "module_id": "helpers",
+      "generator": "helpers_engine_v1",
+      "params": { "helper": "doctor", "tool": "stethoscope", "quiz": "match_tool" },
+      "age_tier": "4-5"
+    },
+    {
+      "activity_id": "music_drum_copy_rhythm_011",
+      "module_id": "music",
+      "generator": "music_engine_v1",
+      "params": { "instrument": "drum", "pattern": "copy_rhythm", "tempo": "slow" },
+      "age_tier": "3-4"
+    },
+    {
+      "activity_id": "opposites_big_small_elephant_mouse_010",
+      "module_id": "opposites",
+      "generator": "opposites_engine_v1",
+      "params": { "pair": "big/small", "visual": "elephant/mouse" },
+      "age_tier": "3-4"
     },
     {
       "activity_id": "shape_detective_hexagon_beach_by_shape_117",
@@ -23,6 +108,45 @@
       "generator": "shape_engine_v1",
       "params": { "shape": "hexagon", "scene": "beach", "rule": "by_shape" },
       "age_tier": "4-5"
+    },
+    {
+      "activity_id": "puzzle_path_farm_6_edge_snap_014",
+      "module_id": "puzzle_path",
+      "generator": "puzzle_engine_v1",
+      "params": { "picture": "farm", "pieces": 6, "difficulty": "edge_snap" },
+      "age_tier": "4-5"
+    },
+    {
+      "activity_id": "math_magic_pattern_ab_blocks_018",
+      "module_id": "math_magic",
+      "generator": "math_engine_v1",
+      "params": { "concept": "patterns", "pattern": "AB", "manipulative": "blocks" },
+      "age_tier": "5-6"
+    },
+    {
+      "activity_id": "memory_match_animals_8_grid_019",
+      "module_id": "memory_match",
+      "generator": "memory_engine_v1",
+      "params": { "deck": "animals", "grid": 8 },
+      "age_tier": "4-5"
+    },
+    {
+      "activity_id": "odd_one_fruits_apple_not_shape_020",
+      "module_id": "odd_one",
+      "generator": "categorization_engine_v1",
+      "params": { "category": "fruits", "odd": "apple", "rule": "not_shape" },
+      "age_tier": "4-5"
+    },
+    {
+      "activity_id": "sequence_life_cycle_3_plant_015",
+      "module_id": "sequence",
+      "generator": "sequence_engine_v1",
+      "params": { "type": "life_cycle", "subject": "plant", "length": 3 },
+      "age_tier": "5-6"
     }
-  ]
+  ],
+  "changelog": {
+    "1.0.0": "3 samples",
+    "1.3.0": "20 samples (1 per module) + added 6 new engine variants (bird, body, weather, emotions, helpers, music)"
+  }
 }

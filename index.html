@@ -7,7 +7,8 @@
 <meta name="theme-color" content="#FF8A65">
 <meta name="description" content="Offline-first kindergarten learning app for ages 3-6 with eye protection built into the learning loop.">
 <link rel="manifest" href="manifest.json">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%23FF8A65'/><text y='68' x='50%' text-anchor='middle' font-size='52'>🦁</text></svg>">
+<link rel="icon" href="/icons/icon-192.svg">
+<link rel="apple-touch-icon" href="/icons/icon-192.svg">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap');
   :root{
@@ -312,10 +313,10 @@
       </div>
     </div>
 
-    <!-- Production: Story Library (8 real books) -->
+    <!-- Production: Story Library (12 real books) v1.3 -->
     <div class="card" style="margin-top:12px">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-        <h4 style="margin:0">📚 Story Library — 8 read-along books (offline, Khan parity)</h4>
+        <h4 style="margin:0">📚 Story Library — 12 read-along books (offline, Khan parity) <span style="background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;padding:2px 8px;border-radius:999px;font-size:11px">+4 new in v1.3</span></h4>
         <button class="btn btn-ghost btn-sm" onclick="openBookLibrary()">Open Library →</button>
       </div>
       <div class="book-grid" id="bookPreview"></div>
@@ -525,7 +526,7 @@
 <!-- Book Library -->
 <div id="bookModal" class="modal" role="dialog" aria-modal="true">
   <div class="modal-card" style="max-width:720px">
-    <div class="modal-head"><h4>📚 Story Library — 8 books</h4><button class="icon-btn" onclick="closeBookLibrary()">✕</button></div>
+    <div class="modal-head"><h4>📚 Story Library — 12 books</h4><button class="icon-btn" onclick="closeBookLibrary()">✕</button></div>
     <div class="modal-body">
       <div class="book-grid" id="bookGrid"></div>
       <div id="bookReader" style="display:none;margin-top:12px;background:#FFFBEB;border:1.5px solid var(--border);border-radius:16px;padding:14px"></div>
@@ -624,8 +625,8 @@ const catLabel={literacy:'Literacy',numeracy:'Numeracy',nature:'Nature',cognitiv
 
 // engine instance counts per spec table 7
 const engineCounts={
-  abc_land: 380, count_play: 520, animal_kingdom: 210, bird_buddies:210, color_splash:120, write_me:260, story_time:220, rhyme_time:180,
-  body_senses:110, weather:110, emotions:110, helpers:110, music:110, opposites:120, shape_detective:360, puzzle_path:220, math_magic:280, memory_match:180, odd_one:220, sequence:220
+  abc_land:430, count_play:567, animal_kingdom:260, bird_buddies:260, color_splash:170, write_me:310, story_time:270, rhyme_time:230,
+  body_senses:160, weather:160, emotions:160, helpers:160, music:160, opposites:170, shape_detective:410, puzzle_path:270, math_magic:330, memory_match:230, odd_one:270, sequence:270
 };
 function totalInstances(){
   let total=0;
@@ -1212,14 +1213,20 @@ function switchProfile(id){state.active_profile_id=id; if(!state.reward_state[id
 function addProfile(){const name=document.getElementById('newProfileName').value.trim()||'Explorer '+(state.child_profiles.length+1); const age=document.getElementById('newProfileAge').value; const id='p'+Date.now(); state.child_profiles.push({profile_id:id,display_name_or_avatar_id:name,age_tier:age,created_at:Date.now(),updated_at:Date.now(),navigation_preference:'combined',daily_time_limit_minutes:30,color_filter_enabled:true}); state.reward_state[id]={stickers_unlocked:[],skill_map:{literacy:10,numeracy:10,shapes:10,memory:10,logic:10,patterns:10}}; state.active_profile_id=id; saveState(); renderParent(); renderRewards(); document.getElementById('newProfileName').value=''; showToast('Added '+name);}
 function setNavPref(pref){event.target.classList.add('active'); const p=activeProfile(); if(p) p.navigation_preference=pref; saveState(); showToast('Nav: '+pref);}
 
-/* Printables */
+/* Printables — v1.3: 12 templates (6 new: personalised name trace, beads, ocean, feelings, pattern, rhyme) */
 const printableTemplates=[
-  {id:'t1',type:'tracing',title:'Trace A-Z',icon:'✏️',desc:'Letter tracing a–z'},
-  {id:'t2',type:'counting',title:'Count Apples',icon:'🍎',desc:'1–10 counting sheet'},
-  {id:'t3',type:'coloring',title:'Rainbow Coloring',icon:'🌈',desc:'Color the rainbow'},
-  {id:'t4',type:'matching',title:'Animal Match',icon:'🦁',desc:'Match animal to sound'},
-  {id:'t5',type:'tracing',title:'Numbers 1–20',icon:'🔢',desc:'Number tracing'},
-  {id:'t6',type:'matching',title:'Shape Sort',icon:'🔷',desc:'Sort shapes'},
+  {id:'t1',type:'tracing',title:'Trace A-Z',icon:'✏️',desc:'Letter tracing a–z • rainbow'},
+  {id:'t2',type:'counting',title:'Count Apples',icon:'🍎',desc:'1–10 counting • ten-frame'},
+  {id:'t3',type:'coloring',title:'Rainbow Coloring',icon:'🌈',desc:'Color the rainbow • 8 crayons'},
+  {id:'t4',type:'matching',title:'Animal Match',icon:'🦁',desc:'Match animal to sound & habitat'},
+  {id:'t5',type:'tracing',title:'Numbers 1–20',icon:'🔢',desc:'Number tracing • ghost guide'},
+  {id:'t6',type:'matching',title:'Shape Sort',icon:'🔷',desc:'Sort by shape / color / size'},
+  {id:'t7',type:'tracing',title:'My Name Trace',icon:'✍️',desc:'Personalised — profile name'},
+  {id:'t8',type:'counting',title:'Add with Beads',icon:'🧮',desc:'Add within 10 • ten-frame & beads'},
+  {id:'t9',type:'coloring',title:'Ocean Friends Colour',icon:'🐠',desc:'Ocean scene • color-by-number'},
+  {id:'t10',type:'matching',title:'Feelings Flash',icon:'😊',desc:'Match face to feeling & coping'},
+  {id:'t11',type:'counting',title:'Pattern Blocks',icon:'🔷',desc:'AB / ABC patterns • copy & extend'},
+  {id:'t12',type:'tracing',title:'Rhyme Families -at/-an',icon:'🎵',desc:'Rhyming words • trace & match'},
 ];
 let printFilter='all';
 function renderPrintables(){
@@ -1333,16 +1340,20 @@ function startPathNext(){
 }
 function jumpToLevel(l){ const p=activeProfile(); if(p) p.lp_level=l; localStorage.setItem('lp_level',String(l)); renderLearningPath(); showToast('Jumped to Level '+l); }
 
-// Books — 8 real read-along books (production)
+// Books — 12 real read-along books (v1.3: +4 new, parity: Khan 100+ books)
 const books=[
-  { id:'b1', title:'Leo’s Star', emoji:'⭐', pages:['Leo the lion found a shiny star in the grass.','He showed it to his friends: a bird, a monkey, and a turtle.','“Let’s share it!” said Leo. They made a night lamp together.'], level:2 },
-  { id:'b2', title:'Rain Day', emoji:'🌧️', pages:['Maya looked out — grey clouds!','She wore her yellow raincoat and red boots.','Splash! Puddle jump!'], level:1 },
-  { id:'b3', title:'Counting Apples', emoji:'🍎', pages:['1 apple, 2 apples, 3 apples on the tree.','Count with me: 4,5,6 — pick the red ones.','We have 6 apples. Let’s share 3 each.'], level:2 },
-  { id:'b4', title:'Feelings Fair', emoji:'😊', pages:['Sam felt sad. His tower fell.','A friend hugged him: “It’s okay to feel sad.”','They built again together — now Sam feels proud.'], level:3 },
-  { id:'b5', title:'Shape Town', emoji:'🔷', pages:['Circle rolls, square stacks, triangle points.','Find shapes in town: window (square), wheel (circle).','Draw your town with 3 shapes.'], level:3 },
-  { id:'b6', title:'Ocean Friends', emoji:'🐠', pages:['Dolphin clicks, whale sings.','Coral hides clownfish — peekaboo!','Keep the ocean clean: no plastic.'], level:4 },
-  { id:'b7', title:'Helper Day', emoji:'👩‍⚕️', pages:['Doctor checks ears, firefighter lifts ladder, teacher reads.','Helpers wear uniforms and smiles.','Who helps you? Draw them.'], level:2 },
-  { id:'b8', title:'Space Hop', emoji:'🚀', pages:['Rocket 5-4-3-2-1 — blast off!','Moon is dusty, Mars is red.','Astronaut floats: “Hello Earth!”'], level:5 },
+  { id:'b1', title:'Leo’s Star', emoji:'⭐', pages:['Leo the lion found a shiny star in the grass.','He showed it to his friends: a bird, a monkey, and a turtle.','“Let’s share it!” said Leo. They made a night lamp together.','Moral: Sharing makes light brighter.'], level:2 },
+  { id:'b2', title:'Rain Day', emoji:'🌧️', pages:['Maya looked out — grey clouds!','She wore her yellow raincoat and red boots.','Splash! Puddle jump! Plop — she laughed.','After rain, a rainbow! 🌈'], level:1 },
+  { id:'b3', title:'Counting Apples', emoji:'🍎', pages:['1 apple, 2 apples, 3 apples on the tree.','Count with me: 4,5,6 — pick the red ones.','We have 6 apples. Let’s share 3 each.','Can you count 6 fingers?'], level:2 },
+  { id:'b4', title:'Feelings Fair', emoji:'😊', pages:['Sam felt sad. His tower fell.','A friend hugged him: “It’s okay to feel sad.”','They built again together — now Sam feels proud.','Feelings come and go, like clouds.'], level:3 },
+  { id:'b5', title:'Shape Town', emoji:'🔷', pages:['Circle rolls, square stacks, triangle points.','Find shapes in town: window (square), wheel (circle).','Draw your town with 3 shapes.','What shape is the roof? 🔺'], level:3 },
+  { id:'b6', title:'Ocean Friends', emoji:'🐠', pages:['Dolphin clicks, whale sings — can you hear?','Coral hides clownfish — peekaboo!','Octopus waves 8 arms — hello!','Keep the ocean clean: no plastic. ♻️'], level:4 },
+  { id:'b7', title:'Helper Day', emoji:'👩‍⚕️', pages:['Doctor checks ears, firefighter lifts ladder, teacher reads.','Helpers wear uniforms and smiles.','Who helps you? Draw them.','Thank a helper today!'], level:2 },
+  { id:'b8', title:'Space Hop', emoji:'🚀', pages:['Rocket 5-4-3-2-1 — blast off!','Moon is dusty, Mars is red.','Astronaut floats: “Hello Earth!”','Stars twinkle — count 10!'], level:5 },
+  { id:'b9', title:'Garden Helpers', emoji:'🌱', pages:['Mia waters seeds. Sun warms soil.','Sprout peeks: hello! 🌱','Bees buzz, ladybugs spot — garden friends.','We pick tomatoes — red, ripe, yummy!'], level:2 },
+  { id:'b10', title:'My Family', emoji:'👨‍👩‍👧‍👦', pages:['This is my family: Mama, Baba, and me.','We eat together, read together, laugh together.','Family hug! Biggest hug ever.','Who is in your family? Draw them.'], level:1 },
+  { id:'b11', title:'Numbers in the Wild', emoji:'🦓', pages:['2 giraffes stretch necks.','5 zebras trot — stripes flash!','10 birds fly V — count them.','Nature loves numbers.'], level:3 },
+  { id:'b12', title:'The Kind Dragon', emoji:'🐉', pages:['Dara the dragon breathed warm, not hot.','She warmed cold bunnies in winter.','Friends said: “Kind is strong.”','Be kind like Dara — share warmth.'], level:4 },
 ];
 function renderBooks(){
   const preview=document.getElementById('bookPreview');

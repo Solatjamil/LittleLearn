@@ -1,0 +1,174 @@
+{
+  "version": "1.3.0",
+  "books": [
+    {
+      "id": "b1",
+      "title": "Leo’s Star",
+      "emoji": "⭐",
+      "level": 2,
+      "pages": [
+        "Leo the lion found a shiny star in the grass.",
+        "He showed it to his friends: a bird, a monkey, and a turtle.",
+        "“Let’s share it!” said Leo. They made a night lamp together.",
+        "Moral: Sharing makes light brighter."
+      ],
+      "words": 32,
+      "comprehension": { "q": "Who did Leo share with?", "opts": ["Friends", "Nobody"], "a": "Friends" }
+    },
+    {
+      "id": "b2",
+      "title": "Rain Day",
+      "emoji": "🌧️",
+      "level": 1,
+      "pages": [
+        "Maya looked out — grey clouds!",
+        "She wore her yellow raincoat and red boots.",
+        "Splash! Puddle jump! Plop — she laughed.",
+        "After rain, a rainbow! 🌈"
+      ],
+      "words": 24
+    },
+    {
+      "id": "b3",
+      "title": "Counting Apples",
+      "emoji": "🍎",
+      "level": 2,
+      "pages": [
+        "1 apple, 2 apples, 3 apples on the tree.",
+        "Count with me: 4, 5, 6 — pick the red ones.",
+        "We have 6 apples. Let’s share 3 each.",
+        "Can you count 6 fingers?"
+      ],
+      "words": 28
+    },
+    {
+      "id": "b4",
+      "title": "Feelings Fair",
+      "emoji": "😊",
+      "level": 3,
+      "pages": [
+        "Sam felt sad. His tower fell.",
+        "A friend hugged him: “It’s okay to feel sad.”",
+        "They built again together — now Sam feels proud.",
+        "Feelings come and go, like clouds."
+      ],
+      "words": 30
+    },
+    {
+      "id": "b5",
+      "title": "Shape Town",
+      "emoji": "🔷",
+      "level": 3,
+      "pages": [
+        "Circle rolls, square stacks, triangle points.",
+        "Find shapes in town: window (square), wheel (circle).",
+        "Draw your town with 3 shapes.",
+        "What shape is the roof? 🔺"
+      ],
+      "words": 26
+    },
+    {
+      "id": "b6",
+      "title": "Ocean Friends",
+      "emoji": "🐠",
+      "level": 4,
+      "pages": [
+        "Dolphin clicks, whale sings — can you hear?",
+        "Coral hides clownfish — peekaboo!",
+        "Octopus waves 8 arms — hello!",
+        "Keep the ocean clean: no plastic. ♻️"
+      ],
+      "words": 24
+    },
+    {
+      "id": "b7",
+      "title": "Helper Day",
+      "emoji": "👩‍⚕️",
+      "level": 2,
+      "pages": [
+        "Doctor checks ears, firefighter lifts ladder, teacher reads.",
+        "Helpers wear uniforms and smiles.",
+        "Who helps you? Draw them.",
+        "Thank a helper today!"
+      ],
+      "words": 22
+    },
+    {
+      "id": "b8",
+      "title": "Space Hop",
+      "emoji": "🚀",
+      "level": 5,
+      "pages": [
+        "Rocket 5-4-3-2-1 — blast off!",
+        "Moon is dusty, Mars is red.",
+        "Astronaut floats: “Hello Earth!”",
+        "Stars twinkle — count 10!"
+      ],
+      "words": 20
+    },
+    {
+      "id": "b9",
+      "title": "Garden Helpers",
+      "emoji": "🌱",
+      "level": 2,
+      "pages": [
+        "Mia waters seeds. Sun warms soil.",
+        "Sprout peeks: hello! 🌱",
+        "Bees buzz, ladybugs spot — garden friends.",
+        "We pick tomatoes — red, ripe, yummy!"
+      ],
+      "words": 26,
+      "new_in_v1_3": true
+    },
+    {
+      "id": "b10",
+      "title": "My Family",
+      "emoji": "👨‍👩‍👧‍👦",
+      "level": 1,
+      "pages": [
+        "This is my family: Mama, Baba, and me.",
+        "We eat together, read together, laugh together.",
+        "Family hug! Biggest hug ever.",
+        "Who is in your family? Draw them."
+      ],
+      "words": 28,
+      "new_in_v1_3": true
+    },
+    {
+      "id": "b11",
+      "title": "Numbers in the Wild",
+      "emoji": "🦓",
+      "level": 3,
+      "pages": [
+        "2 giraffes stretch necks.",
+        "5 zebras trot — stripes flash!",
+        "10 birds fly V — count them.",
+        "Nature loves numbers."
+      ],
+      "words": 20,
+      "new_in_v1_3": true
+    },
+    {
+      "id": "b12",
+      "title": "The Kind Dragon",
+      "emoji": "🐉",
+      "level": 4,
+      "pages": [
+        "Dara the dragon breathed warm, not hot.",
+        "She warmed cold bunnies in winter.",
+        "Friends said: “Kind is strong.”",
+        "Be kind like Dara — share warmth."
+      ],
+      "words": 26,
+      "new_in_v1_3": true
+    }
+  ],
+  "meta": {
+    "total": 12,
+    "read_along": true,
+    "offline": true,
+    "avg_words_per_book": 26,
+    "illstration_style": "flat, warm, high-contrast, blue-light-safe",
+    "new_in_v1_3": 4
+  }
+}
