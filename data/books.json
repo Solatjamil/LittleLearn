@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "books": [
     {
       "id": "b1",
@@ -161,14 +161,71 @@
       ],
       "words": 26,
       "new_in_v1_3": true
+    },
+    {
+      "id": "b13",
+      "title": "The Sleepy Bear",
+      "emoji": "🐻",
+      "level": 2,
+      "pages": [
+        "Benny Bear yawned — winter is coming.",
+        "He gathered leaves for a cozy bed.",
+        "Friends tucked him in: “Sleep well, Benny!”",
+        "In spring, he woke — hello, sun! 🌞"
+      ],
+      "words": 27,
+      "new_in_v1_4": true
+    },
+    {
+      "id": "b14",
+      "title": "Colors Everywhere",
+      "emoji": "🎨",
+      "level": 1,
+      "pages": [
+        "Look! Red apple, blue sky, yellow sun.",
+        "Green leaf, purple flower, orange cat.",
+        "What color is your shirt today?",
+        "Let’s paint a rainbow together! 🌈"
+      ],
+      "words": 26,
+      "new_in_v1_4": true
+    },
+    {
+      "id": "b15",
+      "title": "My Five Senses",
+      "emoji": "👃",
+      "level": 2,
+      "pages": [
+        "I see with my eyes — bright stars!",
+        "I hear with my ears — birds chirp.",
+        "I smell flowers, taste mango, touch soft fur.",
+        "Five senses help me explore the world!"
+      ],
+      "words": 28,
+      "new_in_v1_4": true
+    },
+    {
+      "id": "b16",
+      "title": "Kind Words",
+      "emoji": "💬",
+      "level": 2,
+      "pages": [
+        "Mina said, “Please” — door opened.",
+        "She said, “Thank you” — smiles grew.",
+        "Kind words are like warm sun.",
+        "Try today: say please, thank you, sorry."
+      ],
+      "words": 25,
+      "new_in_v1_4": true
     }
   ],
   "meta": {
-    "total": 12,
+    "total": 16,
     "read_along": true,
     "offline": true,
     "avg_words_per_book": 26,
     "illstration_style": "flat, warm, high-contrast, blue-light-safe",
-    "new_in_v1_3": 4
+    "new_in_v1_3": 4,
+    "new_in_v1_4": 4
   }
 }

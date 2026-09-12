@@ -61,9 +61,48 @@
   .view-toggle button.active{background:var(--ink);color:white}
   .icon-btn{width:42px;height:42px;border-radius:12px;border:1.5px solid var(--border);background:white;display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow)}
   body.web-mode .app-shell{max-width:1280px}
-  body.app-mode{background:#FFF1E6}
-  body.app-mode .app-shell{max-width:420px;background:var(--bg);min-height:100vh;box-shadow:0 20px 60px rgba(45,42,38,.12), 0 2px 20px rgba(45,42,38,.08);border-left:1px solid var(--border);border-right:1px solid var(--border);padding-left:14px;padding-right:14px;border-radius:28px;overflow:hidden;margin-top:12px;}
-  body.app-mode .topbar-inner{max-width:420px}
+  body.app-mode{background:#FFF1E6;padding:0 8px;overflow-x:hidden}
+  body.app-mode .app-shell{width:min(420px,100%);max-width:420px;background:var(--bg);min-height:100vh;box-shadow:0 20px 60px rgba(45,42,38,.12), 0 2px 20px rgba(45,42,38,.08);border:1px solid var(--border);padding:0 14px 96px;border-radius:28px;overflow:hidden;margin:12px auto 0;box-sizing:border-box}
+  body.app-mode .topbar-inner{width:min(420px,100%);max-width:420px;margin:0 auto;padding:0 14px;box-sizing:border-box}
+  /* —— Mobile bootstrapping fix: prevent right-side cropping —— */
+  html{overflow-x:hidden}
+  body{overflow-x:hidden}
+  img,canvas,svg,video{max-width:100%;height:auto;display:block}
+  .card,.module-card,.kpi,.skill,.book-card,.print-thumb{ min-width:0; overflow-wrap:anywhere; }
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  @media(max-width:360px){ .grid{grid-template-columns:1fr} .kpi-grid{grid-template-columns:1fr 1fr} }
+  @media(max-width:480px){
+    .hero{flex-direction:column;text-align:center}
+    .hero-actions{justify-content:center}
+    .topbar-inner{gap:8px}
+    .brand{flex-wrap:wrap}
+    .top-actions{width:100%;justify-content:space-between}
+    .section-head{flex-direction:column;align-items:flex-start}
+    .choice-row{grid-template-columns:1fr}
+    #parentSimpleStats{grid-template-columns:1fr !important}
+  }
+  body.app-mode .bottom-nav{width:min(390px, calc(100% - 24px));left:50%;transform:translateX(-50%);box-sizing:border-box}
+  #weeklyChart{display:block;max-width:100%}
+  .parent-two-col,.parent-profiles-grid{ min-width:0 }
+  @media(max-width:720px){ .parent-two-col{grid-template-columns:1fr !important} .parent-profiles-grid{grid-template-columns:1fr !important} }
+  @media(max-width:640px){ #parentTipsGrid{grid-template-columns:1fr !important} }
+  .data-tabs{flex-wrap:wrap;max-width:100%}
+  .json-box{max-width:100%}
+  /* extra anti-crop guards */
+  .app-shell{overflow-x:hidden;min-width:0}
+  .topbar{overflow-x:hidden}
+  .topbar-inner{min-width:0}
+  .hero{flex-wrap:wrap;min-width:0}
+  .filter-chips{max-width:100%;min-width:0}
+  .filter-chips .chip{flex-shrink:0}
+  .lp-track{max-width:100%;box-sizing:border-box}
+  .book-grid,.print-grid,.skill-grid,.kpi-grid{min-width:0}
+  #pModulesToday{word-break:break-word}
+  @media(max-width:480px){
+    .hero>div:last-child{position:static !important;justify-content:center;width:100%;margin-top:8px}
+    .pill{max-width:100%;white-space:normal}
+    .module-card h4{word-break:break-word}
+  }
   body.app-mode .hide-in-app{display:none !important}
   body.web-mode .hide-in-web{display:none !important}
   .hero{margin:18px 0 14px;background:white;border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:16px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:center;position:relative;overflow:hidden}
@@ -197,6 +236,13 @@
   .book-cover{height:96px;display:grid;place-items:center;font-size:36px;background:linear-gradient(135deg,#FFFBEB,#FFE4CC)}
   .chart-wrap{background:white;border:1.5px solid var(--border);border-radius:16px;padding:12px}
   .cert{border:2px dashed #F59E0B;background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border-radius:16px;padding:14px;text-align:center}
+  /* final mobile overrides — must stay last to win cascade */
+  body.app-mode .app-shell{width:min(420px,100%) !important;max-width:420px !important;padding:0 14px 96px !important;box-sizing:border-box !important}
+  body.app-mode .bottom-nav{width:min(390px, calc(100% - 24px)) !important;left:50% !important;transform:translateX(-50%) !important;box-sizing:border-box !important}
+  body.app-mode .grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  @media(max-width:360px){ body.app-mode .grid{grid-template-columns:1fr !important} }
+  .parent-two-col,.parent-profiles-grid{ min-width:0 }
+  @media(max-width:720px){ .parent-two-col{grid-template-columns:1fr !important} .parent-profiles-grid{grid-template-columns:1fr !important} }
 </style>
 </head>
 <body class="eye-protection web-mode">
@@ -237,7 +283,7 @@
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
           <h2 id="greeting">Hi, Explorer! Ready to learn?</h2>
           <span class="pill" style="background:#FFF7ED">🎧 Tap anything — Leo will read it aloud</span>
-          <span class="pill" style="background:#ECFDF5;border-color:#A7F3D0" id="contentLivePill">⚡ 5,247 activities live • Engine running</span>
+          <span class="pill" style="background:#ECFDF5;border-color:#A7F3D0" id="contentLivePill">⚡ 5,672 activities live • Engine running</span>
         </div>
         <p>Leo guides every step. Eye breaks are part of the story — warm filter ON by default, 20-20-20 every 20 min, 30 min cap.</p>
         <div class="hero-actions">
@@ -253,7 +299,7 @@
       <div style="position:absolute;right:12px;bottom:10px;display:flex;gap:6px;z-index:1">
         <span class="pill" style="font-size:12px">Offline ✓</span>
         <span class="pill" style="font-size:12px">No login ✓</span>
-        <span class="pill" style="font-size:12px;background:#2D2A26;color:white" id="engineCountPill">5,247 live</span>
+        <span class="pill" style="font-size:12px;background:#2D2A26;color:white" id="engineCountPill">5,672 live</span>
       </div>
     </div>
 
@@ -262,11 +308,11 @@
       <div style="width:44px;height:44px;border-radius:12px;background:white;display:grid;place-items:center;font-size:20px;flex-shrink:0">🗃️</div>
       <div style="flex:1;min-width:220px">
         <b style="font-size:13px">Data is LIVE — pushing content works <span class="live-dot"></span></b>
-        <div style="color:#065F46;font-weight:700;font-size:12px;line-height:1.3">Procedural engines generate 5,247 activities on-device. Play anything → progress saves instantly → parent dashboard updates. Try “Seed Demo Week”.</div>
+        <div style="color:#065F46;font-weight:700;font-size:12px;line-height:1.3">Procedural engines generate 5,672 activities on-device. Play anything → progress saves instantly → parent dashboard updates. Try “Seed Demo Week”.</div>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <button class="btn btn-teal btn-sm" onclick="seedDemoWeek()">Seed data</button>
-        <button class="btn btn-ghost btn-sm" onclick="openParentGate()">Open Data Layer →</button>
+        <button class="btn btn-ghost btn-sm" onclick="openParentGate()">Open Parent View →</button>
       </div>
     </div>
 
@@ -279,14 +325,14 @@
     <div class="section-head"><div><h3>✨ Choose Your Next Adventure</h3><p>Child picks from 2–3 options — autonomy + focus</p></div><button class="pill" onclick="shuffleChoices()">Shuffle ↻</button></div>
     <div id="choiceRow" class="choice-row"></div>
 
-    <div class="section-head"><div><h3>🧩 All Learning Worlds</h3><p id="moduleCount">20 worlds • 5,247 activities via variation engine • Tap to play</p></div><div class="filter-chips" id="filterChips"></div></div>
+    <div class="section-head"><div><h3>🧩 All Learning Worlds</h3><p id="moduleCount">20 worlds • 5,672 activities via variation engine • Tap to play</p></div><div class="filter-chips" id="filterChips"></div></div>
     <div id="moduleGrid" class="grid"></div>
 
     <!-- Live engine stats -->
     <div class="card" style="margin-top:14px">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
         <h4 style="margin:0">⚙️ Content Engine — Live</h4>
-        <span class="pill" id="engineStatus">All generators healthy • 5,247 instances</span>
+        <span class="pill" id="engineStatus">All generators healthy • 5,672 instances</span>
       </div>
       <div id="engineStats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:12px"></div>
       <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
@@ -313,10 +359,10 @@
       </div>
     </div>
 
-    <!-- Production: Story Library (12 real books) v1.3 -->
+    <!-- Production: Story Library (16 real books) v1.4 -->
     <div class="card" style="margin-top:12px">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-        <h4 style="margin:0">📚 Story Library — 12 read-along books (offline, Khan parity) <span style="background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;padding:2px 8px;border-radius:999px;font-size:11px">+4 new in v1.3</span></h4>
+        <h4 style="margin:0">📚 Story Library — 16 read-along books (offline, Khan parity) <span style="background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;padding:2px 8px;border-radius:999px;font-size:11px">+4 new in v1.4</span></h4>
         <button class="btn btn-ghost btn-sm" onclick="openBookLibrary()">Open Library →</button>
       </div>
       <div class="book-grid" id="bookPreview"></div>
@@ -359,7 +405,7 @@
   <section id="screen-parent" class="screen">
     <div class="card" style="background:linear-gradient(135deg,#FFF7ED,#ECFDF5);display:flex;gap:14px;align-items:center;flex-wrap:wrap">
       <div style="width:56px;height:56px;border-radius:16px;background:var(--ink);color:white;display:grid;place-items:center;font-size:26px">👨‍👩‍👧</div>
-      <div style="flex:1"><h3 style="margin:0;font-family:'Baloo 2',cursive">Parent Dashboard</h3><div style="color:var(--muted);font-weight:700;font-size:13px">Usage • Skill Map • Printables • Data Layer • Offline local</div></div>
+      <div style="flex:1"><h3 style="margin:0;font-family:'Baloo 2',cursive">Parent Dashboard</h3><div style="color:var(--muted);font-weight:700;font-size:13px">Time together • Growing skills • Printables • Eye care • Offline</div></div>
       <span class="pill" style="background:#ECFDF5;border-color:#A7F3D0">🔒 Parent-gated</span>
       <button class="btn btn-ghost" onclick="lockParent()">Lock → Child Mode</button>
     </div>
@@ -371,40 +417,60 @@
       <div class="kpi"><b id="pReports">Live</b><span>Report</span></div>
     </div>
 
-    <!-- Live Data Layer -->
-    <div class="card" style="margin-top:12px">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-        <h4 style="margin:0">🗃️ Live Data Layer <span style="font-weight:700;color:var(--muted);font-size:12px">— local, offline-first, per Backend spec</span></h4>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <button class="btn btn-teal btn-sm" onclick="seedDemoWeek()">⚡ Seed Week</button>
-          <button class="btn btn-dark btn-sm" onclick="simulateWeekPlay()">▶ Simulate 8 plays</button>
-          <button class="btn btn-ghost btn-sm" onclick="pushNewContent()">+120 activities</button>
-          <button class="btn btn-ghost btn-sm" onclick="clearAllData()">🗑 Wipe</button>
+    <!-- Parent-friendly Today — replaces technical Live Data Layer (kept hidden for devs) -->
+    <div class="card" style="margin-top:12px;background:linear-gradient(135deg,#FFF7ED,#FFFBEB);border-color:#FDBA74">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="width:48px;height:48px;border-radius:14px;background:white;display:grid;place-items:center;font-size:24px;box-shadow:var(--shadow);flex-shrink:0">📖</div>
+        <div style="flex:1;min-width:200px">
+          <h4 style="margin:0">Today for <span id="parentChildName">Aya</span> — in plain words</h4>
+          <div id="parentTodaySummary" style="color:var(--muted);font-weight:700;font-size:13px;line-height:1.4;margin-top:2px">Aya hasn’t started yet today — tap “Start Adventure” on Home and Leo will guide her. Warm filter is ON, 20-minute eye breaks are automatic.</div>
+        </div>
+        <button class="btn btn-ghost btn-sm" onclick="seedDemoWeek()">🔄 Load example day</button>
+      </div>
+      <div id="parentSimpleStats" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px">
+        <div style="background:white;border:1.5px solid var(--border);border-radius:16px;padding:12px">
+          <div style="font-size:20px">⏱️</div><b style="font-size:13px">Time today</b><div id="psTime" style="color:var(--muted);font-weight:700;font-size:12px;margin-top:4px">0 minutes — plenty left for play</div>
+        </div>
+        <div style="background:white;border:1.5px solid var(--border);border-radius:16px;padding:12px">
+          <div style="font-size:20px">🌟</div><b style="font-size:13px">What went well</b><div id="psWell" style="color:var(--muted);font-weight:700;font-size:12px;margin-top:4px">Start playing to see strengths</div>
+        </div>
+        <div style="background:white;border:1.5px solid var(--border);border-radius:16px;padding:12px">
+          <div style="font-size:20px">💡</div><b style="font-size:13px">Try tonight at home</b><div id="psTry" style="color:var(--muted);font-weight:700;font-size:12px;margin-top:4px">Count apples while cooking — “How many red ones?”</div>
         </div>
       </div>
-      <div style="color:var(--muted);font-weight:700;font-size:12px;margin-top:6px">Every tap writes to IndexedDB/localStorage. No server needed. Toggle tabs below — data updates instantly as child plays.</div>
-      <div class="data-tabs" id="dataTabs">
-        <button class="data-tab active" onclick="showDataTab('profiles',this)">child_profile (1)</button>
-        <button class="data-tab" onclick="showDataTab('progress',this)">activity_progress (0)</button>
-        <button class="data-tab" onclick="showDataTab('sessions',this)">session_log (0)</button>
-        <button class="data-tab" onclick="showDataTab('rewards',this)">reward_state</button>
-        <button class="data-tab" onclick="showDataTab('settings',this)">settings</button>
-        <button class="data-tab" onclick="showDataTab('content',this)">content_pack (5,247)</button>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+        <button class="btn btn-primary btn-sm" onclick="generateWeeklyPDF()">🖨️ Print today’s play</button>
+        <button class="btn btn-ghost btn-sm" onclick="document.getElementById('parentTips').scrollIntoView({behavior:'smooth'})">💡 Tips for tonight →</button>
+        <button class="btn btn-ghost btn-sm" onclick="switchScreen('rewards')">🏆 See stickers</button>
       </div>
-      <div id="dataJson" class="json-box" style="margin-top:8px">Loading…</div>
-      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
-        <button class="btn btn-primary btn-sm" onclick="exportData()">⬇️ Export full JSON</button>
-        <button class="btn btn-ghost btn-sm" onclick="document.getElementById('importFile2').click()">⬆️ Import JSON</button>
-        <input type="file" id="importFile2" accept=".json" style="display:none" onchange="importData(event)">
-        <button class="btn btn-ghost btn-sm" onclick="copyDataJson()">Copy</button>
-        <span id="dataStatus" style="color:var(--muted);font-weight:700;font-size:12px;align-self:center"></span>
-      </div>
+      <details style="margin-top:12px;background:white;border:1.5px solid var(--border);border-radius:12px;padding:10px">
+        <summary style="font-weight:800;cursor:pointer;color:var(--muted);font-size:12px">Advanced — for teachers (export / add data)</summary>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+          <button class="btn btn-ghost btn-sm" onclick="simulateWeekPlay()">▶ Simulate 8 plays</button>
+          <button class="btn btn-ghost btn-sm" onclick="pushNewContent()">+120 activities</button>
+          <button class="btn btn-ghost btn-sm" onclick="exportData()">⬇️ Export</button>
+          <button class="btn btn-ghost btn-sm" onclick="document.getElementById('importFile2').click()">⬆️ Import</button>
+          <button class="btn btn-ghost btn-sm" onclick="clearAllData()">🗑 Reset</button>
+          <input type="file" id="importFile2" accept=".json" style="display:none" onchange="importData(event)">
+          <button class="btn btn-ghost btn-sm" onclick="copyDataJson()">Copy JSON</button>
+        </div>
+        <div class="data-tabs" id="dataTabs" style="margin-top:8px">
+          <button class="data-tab active" onclick="showDataTab('profiles',this)">child_profile (1)</button>
+          <button class="data-tab" onclick="showDataTab('progress',this)">activity_progress (0)</button>
+          <button class="data-tab" onclick="showDataTab('sessions',this)">session_log (0)</button>
+          <button class="data-tab" onclick="showDataTab('rewards',this)">reward_state</button>
+          <button class="data-tab" onclick="showDataTab('settings',this)">settings</button>
+          <button class="data-tab" onclick="showDataTab('content',this)">content_pack (5,672)</button>
+        </div>
+        <div id="dataJson" class="json-box" style="margin-top:8px;max-height:240px">Loading…</div>
+        <div id="dataStatus" style="color:var(--muted);font-weight:700;font-size:11px;margin-top:6px"></div>
+      </details>
     </div>
 
-    <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:12px;margin-top:12px">
+    <div class="parent-two-col" style="display:grid;grid-template-columns:1.2fr .8fr;gap:12px;margin-top:12px">
       <div class="card">
-        <h4 style="margin:0 0 10px">🌳 Skill Map</h4><div id="skillMap" class="skill-grid"></div>
-        <div style="margin-top:10px;color:var(--muted);font-weight:700;font-size:11px">Filled leaves = progress (internal 0–100). No child comparison.</div>
+        <h4 style="margin:0 0 10px">🌱 How your child is growing</h4><div id="skillMap" class="skill-grid"></div>
+        <div style="margin-top:10px;color:var(--muted);font-weight:700;font-size:11px">🌱 More leaves = more practice. Your child just sees stars — no scores, no comparisons.</div>
         <div id="reviewQueue" style="margin-top:10px;background:#FFFBEB;border:1.5px dashed #FDBA74;border-radius:12px;padding:10px;font-weight:700;font-size:12px"></div>
       </div>
       <div class="card">
@@ -420,19 +486,37 @@
       </div>
     </div>
 
-    <!-- Weekly Report Chart (production, competitor parity) -->
+    <!-- Parent Tips — plain language, no jargon -->
+    <div id="parentTips" class="card" style="margin-top:12px;background:linear-gradient(135deg,#ECFDF5,#FFF7ED);border-color:#A7F3D0">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <div style="width:44px;height:44px;border-radius:12px;background:white;display:grid;place-items:center;font-size:22px;flex-shrink:0">💛</div>
+        <div style="flex:1;min-width:220px">
+          <h4 style="margin:0">What to try tonight — no screens needed</h4>
+          <div style="color:var(--muted);font-weight:700;font-size:12px">2-minute ideas that build the same skills Leo practiced today.</div>
+        </div>
+        <button class="btn btn-ghost btn-sm" onclick="generateWeeklyPDF()">🖨️ Print worksheets</button>
+      </div>
+      <div id="parentTipsGrid" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px">
+        <div style="background:white;border:1.5px solid var(--border);border-radius:14px;padding:12px"><b style="font-size:13px">🗣️ Talk</b><div style="color:var(--muted);font-weight:700;font-size:12px;margin-top:4px">At dinner: “What animal sound made you laugh today?” Let them roar!</div></div>
+        <div style="background:white;border:1.5px solid var(--border);border-radius:14px;padding:12px"><b style="font-size:13px">✋ Do</b><div style="color:var(--muted);font-weight:700;font-size:12px;margin-top:4px">Build a tower with 5 blocks, then add 2 — “How many now?”</div></div>
+        <div style="background:white;border:1.5px solid var(--border);border-radius:14px;padding:12px"><b style="font-size:13px">🌙 Wind-down</b><div style="color:var(--muted);font-weight:700;font-size:12px;margin-top:4px">20-second eye rest: look at something far, breathe together.</div></div>
+      </div>
+      <div style="color:var(--muted);font-weight:700;font-size:11px;margin-top:8px">Eye care: warm paper, crayons, and gentle light are best after screen time. No glossy screens before bed.</div>
+    </div>
+
+    <!-- Weekly Report — plain words -->
     <div class="card" style="margin-top:12px">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-        <h4 style="margin:0">📊 Weekly Report — Time per day (live from session_log)</h4>
+        <h4 style="margin:0">📊 This week at a glance</h4>
         <button class="btn btn-ghost btn-sm" onclick="renderWeeklyChart()">Refresh chart ↻</button>
       </div>
       <div class="chart-wrap" style="margin-top:10px">
         <canvas id="weeklyChart" width="640" height="180" style="width:100%;height:180px"></canvas>
-        <div style="color:var(--muted);font-weight:700;font-size:11px;margin-top:6px">Offline chart • No external library • Updates as child plays • Export via Print</div>
+        <div style="color:var(--muted);font-weight:700;font-size:11px;margin-top:6px">Each bar = one day. Taller = more playful learning. Tip: aim for short, happy sessions — not long ones.</div>
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+    <div class="parent-profiles-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
       <div class="card">
         <h4 style="margin:0 0 8px">👶 Child Profiles</h4><div id="profileList" style="display:flex;flex-direction:column;gap:8px"></div>
         <div style="display:flex;gap:8px;margin-top:10px"><input id="newProfileName" placeholder="Name (e.g., Aya ★)" style="flex:1;border:1.5px solid var(--border);border-radius:12px;padding:10px 12px;font-weight:700"><select id="newProfileAge" style="border:1.5px solid var(--border);border-radius:12px;padding:10px;font-weight:800"><option>3-4</option><option selected>4-5</option><option>5-6</option></select><button class="btn btn-dark" onclick="addProfile()">Add</button></div>
@@ -526,7 +610,7 @@
 <!-- Book Library -->
 <div id="bookModal" class="modal" role="dialog" aria-modal="true">
   <div class="modal-card" style="max-width:720px">
-    <div class="modal-head"><h4>📚 Story Library — 12 books</h4><button class="icon-btn" onclick="closeBookLibrary()">✕</button></div>
+    <div class="modal-head"><h4>📚 Story Library — 16 books</h4><button class="icon-btn" onclick="closeBookLibrary()">✕</button></div>
     <div class="modal-body">
       <div class="book-grid" id="bookGrid"></div>
       <div id="bookReader" style="display:none;margin-top:12px;background:#FFFBEB;border:1.5px solid var(--border);border-radius:16px;padding:14px"></div>
@@ -623,10 +707,10 @@ function allModules(){return [...baseModules, ...extraModules];}
 let modules=allModules();
 const catLabel={literacy:'Literacy',numeracy:'Numeracy',nature:'Nature',cognitive:'Cognitive',life:'Life Skills',creative:'Creative'};
 
-// engine instance counts per spec table 7
+// engine instance counts v1.4 — 5,672 live (see data/content-manifest.json)
 const engineCounts={
-  abc_land:430, count_play:567, animal_kingdom:260, bird_buddies:260, color_splash:170, write_me:310, story_time:270, rhyme_time:230,
-  body_senses:160, weather:160, emotions:160, helpers:160, music:160, opposites:170, shape_detective:410, puzzle_path:270, math_magic:330, memory_match:230, odd_one:270, sequence:270
+  abc_land:450, count_play:587, animal_kingdom:275, bird_buddies:275, color_splash:195, write_me:330, story_time:330, rhyme_time:250,
+  body_senses:175, weather:175, emotions:180, helpers:180, music:185, opposites:190, shape_detective:430, puzzle_path:285, math_magic:350, memory_match:250, odd_one:285, sequence:295
 };
 function totalInstances(){
   let total=0;
@@ -1207,6 +1291,53 @@ function renderParent(){
   document.getElementById('skillMap').innerHTML=skills.map(s=>{const val=rewards.skill_map[s.k]||0; const leaves=5; const filled=Math.round((val/100)*leaves); return `<div class="skill"><div style="font-size:22px">${s.icon}</div><b style="font-size:13px">${s.label}</b><div class="leaf-row">${Array.from({length:leaves}).map((_,i)=>`<span class="leaf ${i<filled?'filled':''}"></span>`).join('')}</div><div style="color:var(--muted);font-weight:800;font-size:11px;margin-top:4px">${filled}/${leaves} leaves</div></div>`;}).join('');
   document.getElementById('pEyeBreaks').textContent=state.eye_breaks_taken||0;
   document.getElementById('pModulesToday').textContent=[...state.modules_used_today].join(', ')||'None yet';
+  // — Parent-friendly plain-language summary (replaces technical view) —
+  try{
+    const prof=activeProfile(); const name=(prof.display_name_or_avatar_id||'Your child').replace(/★/g,'').trim();
+    const nameEl=document.getElementById('parentChildName'); if(nameEl) nameEl.textContent=name;
+    const mins=Math.floor(secondsToday/60); const secs=secondsToday%60;
+    const mods=[...state.modules_used_today]; const prettyMods=mods.slice(0,2).map(id=> (allModules().find(m=>m.id===id)?.name||id)).join(' and ') || '';
+    const stickers=(rewards.stickers_unlocked||[]).length;
+    const mastered=state.activity_progress.filter(p=>p.profile_id===prof.profile_id && p.mastered).length;
+    let summary='';
+    if(state.activity_progress.length===0 && mins===0) summary=`${name} hasn’t started yet today — tap “Start Adventure” on Home and Leo will guide her. Warm filter is ON, eye breaks are automatic every 20 minutes.`;
+    else if(mods.length===0) summary=`${name} played for ${mins} minute${mins!==1?'s':''} today and took ${state.eye_breaks_taken||0} healthy eye break${(state.eye_breaks_taken||0)!==1?'s':''}. Warm filter stayed ON the whole time.`;
+    else summary=`${name} played for ${mins} minute${mins!==1?'s':''} today, explored ${prettyMods||'a learning world'}, earned ${stickers} sticker${stickers!==1?'s':''}${mastered?` (${mastered} mastered)`:''}, and took ${state.eye_breaks_taken||0} eye break${(state.eye_breaks_taken||0)!==1?'s':''}. Warm filter stayed ON.`;
+    const sumEl=document.getElementById('parentTodaySummary'); if(sumEl) sumEl.textContent=summary;
+    const psTime=document.getElementById('psTime'); if(psTime) psTime.textContent= mins===0 ? '0 minutes — plenty left for play' : `${mins} min ${secs?` ${secs}s`:''} • ${dailyCapMinutes*60-secondsToday>0? Math.floor((dailyCapMinutes*60-secondsToday)/60)+' min left': 'daily time complete — great job!'}`;
+    // what went well: pick strongest skill
+    let bestSkill=skills.reduce((a,b)=> (rewards.skill_map[b.k]||0) > (rewards.skill_map[a.k]||0) ? b : a, skills[0]);
+    const bestVal=rewards.skill_map[bestSkill.k]||0;
+    const psWell=document.getElementById('psWell'); if(psWell){
+      if(state.activity_progress.length===0) psWell.textContent='Start playing to see strengths';
+      else psWell.textContent= bestVal>60 ? `${bestSkill.label} is shining — keeps trying until correct` : bestVal>30 ? `${bestSkill.label} is growing — gentle practice is working` : `${bestSkill.label} — just getting started, Leo keeps it playful`;
+    }
+    // try tonight: rotate suggestions based on mods
+    const suggestions={
+      literacy: 'Read aloud together: “What sound does A make?”',
+      numeracy: 'Count apples while cooking — “How many red ones?”',
+      shapes: 'Spot shapes at home — “Find something round!”',
+      memory: 'Play peekaboo with 3 cups and a button',
+      logic: 'Sort socks by color together',
+      patterns: 'Clap a pattern: 👏 👏 ✋ — can they copy?',
+      nature: 'Name 3 animals and their sounds tonight',
+      life: 'Talk about feelings: “When did you feel proud?”',
+      creative: 'Color with crayons on warm paper for 5 minutes'
+    };
+    const lastMod=mods[mods.length-1]; const lastCat=allModules().find(m=>m.id===lastMod)?.cat || 'literacy';
+    const psTry=document.getElementById('psTry'); if(psTry) psTry.textContent= suggestions[lastCat] || suggestions.literacy;
+    // refresh parent tips grid (3 cards) dynamically
+    const tipsGrid=document.getElementById('parentTipsGrid');
+    if(tipsGrid){
+      const tipSets=[
+        {icon:'🗣️',title:'Talk',desc:`At dinner: “What ${bestSkill.label.toLowerCase()} moment made you smile today?”`},
+        {icon:'✋',title:'Do',desc: suggestions[lastCat] || 'Build a tower with 5 blocks, then add 2 — “How many now?”'},
+        {icon:'🌙',title:'Wind-down',desc:'20-second eye rest: look at something far, breathe together — no screens before bed.'}
+      ];
+      // if demo week seeded, show slightly richer
+      tipsGrid.innerHTML=tipSets.map(t=>`<div style="background:white;border:1.5px solid var(--border);border-radius:14px;padding:12px"><b style="font-size:13px">${t.icon} ${t.title}</b><div style="color:var(--muted);font-weight:700;font-size:12px;margin-top:4px">${t.desc}</div></div>`).join('');
+    }
+  }catch(e){ console.warn('parent friendly render',e)}
   renderPrintables(); refreshDataInspector();
 }
 function switchProfile(id){state.active_profile_id=id; if(!state.reward_state[id]) state.reward_state[id]={stickers_unlocked:[],skill_map:{literacy:10,numeracy:10,shapes:10,memory:10,logic:10,patterns:10}}; saveState(); renderParent(); renderRewards(); applyEyeProtection(); updateGreeting(); showToast('Switched profile');}
@@ -1227,6 +1358,10 @@ const printableTemplates=[
   {id:'t10',type:'matching',title:'Feelings Flash',icon:'😊',desc:'Match face to feeling & coping'},
   {id:'t11',type:'counting',title:'Pattern Blocks',icon:'🔷',desc:'AB / ABC patterns • copy & extend'},
   {id:'t12',type:'tracing',title:'Rhyme Families -at/-an',icon:'🎵',desc:'Rhyming words • trace & match'},
+  {id:'t13',type:'matching',title:'Shape Hunt',icon:'🔍',desc:'Find shapes hidden in busy scene'},
+  {id:'t14',type:'tracing',title:'I Can Dress',icon:'👕',desc:'Weather → pick clothes • draw outfit'},
+  {id:'t15',type:'tracing',title:'Kind Words Trace',icon:'💬',desc:'Trace please / thank you / sorry'},
+  {id:'t16',type:'matching',title:'Five Senses Match',icon:'👃',desc:'Match sense to body part'},
 ];
 let printFilter='all';
 function renderPrintables(){
@@ -1340,7 +1475,7 @@ function startPathNext(){
 }
 function jumpToLevel(l){ const p=activeProfile(); if(p) p.lp_level=l; localStorage.setItem('lp_level',String(l)); renderLearningPath(); showToast('Jumped to Level '+l); }
 
-// Books — 12 real read-along books (v1.3: +4 new, parity: Khan 100+ books)
+// Books — 16 real read-along books (v1.4: +4 new, parity: Khan 100+ books)
 const books=[
   { id:'b1', title:'Leo’s Star', emoji:'⭐', pages:['Leo the lion found a shiny star in the grass.','He showed it to his friends: a bird, a monkey, and a turtle.','“Let’s share it!” said Leo. They made a night lamp together.','Moral: Sharing makes light brighter.'], level:2 },
   { id:'b2', title:'Rain Day', emoji:'🌧️', pages:['Maya looked out — grey clouds!','She wore her yellow raincoat and red boots.','Splash! Puddle jump! Plop — she laughed.','After rain, a rainbow! 🌈'], level:1 },
@@ -1354,6 +1489,10 @@ const books=[
   { id:'b10', title:'My Family', emoji:'👨‍👩‍👧‍👦', pages:['This is my family: Mama, Baba, and me.','We eat together, read together, laugh together.','Family hug! Biggest hug ever.','Who is in your family? Draw them.'], level:1 },
   { id:'b11', title:'Numbers in the Wild', emoji:'🦓', pages:['2 giraffes stretch necks.','5 zebras trot — stripes flash!','10 birds fly V — count them.','Nature loves numbers.'], level:3 },
   { id:'b12', title:'The Kind Dragon', emoji:'🐉', pages:['Dara the dragon breathed warm, not hot.','She warmed cold bunnies in winter.','Friends said: “Kind is strong.”','Be kind like Dara — share warmth.'], level:4 },
+  { id:'b13', title:'The Sleepy Bear', emoji:'🐻', pages:['Benny Bear yawned — winter is coming.','He gathered leaves for a cozy bed.','Friends tucked him in: “Sleep well, Benny!”','In spring, he woke — hello, sun! 🌞'], level:2 },
+  { id:'b14', title:'Colors Everywhere', emoji:'🎨', pages:['Look! Red apple, blue sky, yellow sun.','Green leaf, purple flower, orange cat.','What color is your shirt today?','Let’s paint a rainbow together! 🌈'], level:1 },
+  { id:'b15', title:'My Five Senses', emoji:'👃', pages:['I see with my eyes — bright stars!','I hear with my ears — birds chirp.','I smell flowers, taste mango, touch soft fur.','Five senses help me explore the world!'], level:2 },
+  { id:'b16', title:'Kind Words', emoji:'💬', pages:['Mina said, “Please” — door opened.','She said, “Thank you” — smiles grew.','Kind words are like warm sun.','Try today: say please, thank you, sorry.'], level:2 },
 ];
 function renderBooks(){
   const preview=document.getElementById('bookPreview');

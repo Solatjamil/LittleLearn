@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "templates": [
     { "id": "t1", "type": "tracing", "title": "Trace A-Z", "icon": "✏️", "desc": "Letter tracing a–z • dotted + rainbow", "level": 1, "pages": 2 },
     { "id": "t2", "type": "counting", "title": "Count Apples", "icon": "🍎", "desc": "1–10 counting sheet • ten-frame", "level": 1, "pages": 1 },
@@ -12,15 +12,20 @@
     { "id": "t9", "type": "coloring", "title": "Ocean Friends Colour", "icon": "🐠", "desc": "Ocean scene • color-by-number", "level": 2, "pages": 1, "new_in_v1_3": true },
     { "id": "t10", "type": "matching", "title": "Feelings Flash", "icon": "😊", "desc": "Match face to feeling & coping", "level": 2, "pages": 1, "new_in_v1_3": true },
     { "id": "t11", "type": "counting", "title": "Pattern Blocks", "icon": "🔷", "desc": "AB / ABC patterns • copy & extend", "level": 3, "pages": 1, "new_in_v1_3": true },
-    { "id": "t12", "type": "tracing", "title": "Rhyme Families -at/-an", "icon": "🎵", "desc": "Rhyming words • trace & match", "level": 3, "pages": 1, "new_in_v1_3": true }
+    { "id": "t12", "type": "tracing", "title": "Rhyme Families -at/-an", "icon": "🎵", "desc": "Rhyming words • trace & match", "level": 3, "pages": 1, "new_in_v1_3": true },
+    { "id": "t13", "type": "matching", "title": "Shape Hunt", "icon": "🔍", "desc": "Find shapes hidden in busy scene", "level": 2, "pages": 1, "new_in_v1_4": true },
+    { "id": "t14", "type": "tracing", "title": "I Can Dress", "icon": "👕", "desc": "Weather → pick clothes • draw outfit", "level": 2, "pages": 1, "new_in_v1_4": true },
+    { "id": "t15", "type": "tracing", "title": "Kind Words Trace", "icon": "💬", "desc": "Trace please / thank you / sorry", "level": 1, "pages": 1, "new_in_v1_4": true },
+    { "id": "t16", "type": "matching", "title": "Five Senses Match", "icon": "👃", "desc": "Match sense to body part", "level": 2, "pages": 1, "new_in_v1_4": true }
   ],
   "meta": {
-    "total": 12,
+    "total": 16,
     "local_pdf": "jspdf",
     "fallback": "window.print",
     "qr_deeplink": "littlelearn://activity/<id>",
     "a4": true,
     "offline": true,
-    "new_in_v1_3": 6
+    "new_in_v1_3": 6,
+    "new_in_v1_4": 4
   }
 }

@@ -1,9 +1,9 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "generated_at": "2026-09-12",
   "target_instances": 5600,
-  "live_instances": 5247,
-  "note": "Procedural variation engine — every activity_id = hash(generator_params) for deterministic spaced repetition; adds 997 variants over v1.2 to reach parity with ABCmouse 10-level scale while staying 100% offline",
+  "live_instances": 5672,
+  "note": "v1.4 adds 425 variants over v1.3 (total 5672) + 4 books (16 total) + 4 printables (16) + parent plain-language tips; still 100% offline, deterministic hash",
   "modules": [
     {
       "module_id": "abc_land",
@@ -11,20 +11,64 @@
       "category": "literacy",
       "emoji": "🔤",
       "color": "#FF8A65",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "letter_phonics_v1",
       "asset_bundle": "assets/abc_land/",
       "generator_spec": {
         "generator_id": "letter_phonics_v1",
         "parameters": {
           "letter_pool": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-          "phonics_word_pool": ["Apple","Ball","Cat","Dog","Egg","Fish","Grape","Hat","Ice","Jam","Kite","Lion","Moon","Nest","Orange","Pen","Queen","Rain","Sun","Tree","Umbrella","Van","Whale","Xylophone","Yacht","Zebra"],
-          "tracing_patterns": ["dotted","arrow-guided","freehand","rainbow-trace"],
-          "interaction_types": ["trace","tap_sound","match_case","find_in_word"]
+          "phonics_word_pool": [
+            "Apple",
+            "Ball",
+            "Cat",
+            "Dog",
+            "Egg",
+            "Fish",
+            "Grape",
+            "Hat",
+            "Ice",
+            "Jam",
+            "Kite",
+            "Lion",
+            "Moon",
+            "Nest",
+            "Orange",
+            "Pen",
+            "Queen",
+            "Rain",
+            "Sun",
+            "Tree",
+            "Umbrella",
+            "Van",
+            "Whale",
+            "Xylophone",
+            "Yacht",
+            "Zebra"
+          ],
+          "tracing_patterns": [
+            "dotted",
+            "arrow-guided",
+            "freehand",
+            "rainbow-trace"
+          ],
+          "interaction_types": [
+            "trace",
+            "tap_sound",
+            "match_case",
+            "find_in_word"
+          ]
         },
         "instance_formula": "26 letters × 4 tracing × 4 interaction × age variants",
-        "approx_instances": 430,
-        "new_in_v1_3": ["rainbow-trace","find_in_word"]
+        "approx_instances": 450,
+        "new_in_v1_3": [
+          "rainbow-trace",
+          "find_in_word"
+        ]
       }
     },
     {
@@ -33,20 +77,65 @@
       "category": "numeracy",
       "emoji": "🔢",
       "color": "#14B8A6",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "counting_engine_v1",
       "asset_bundle": "assets/count_and_play/",
       "generator_spec": {
         "generator_id": "counting_engine_v1",
         "parameters": {
-          "object_pool": ["apple","star","duck","block","flower","bee","strawberry","car","shell","leaf","balloon","button"],
-          "count_range_by_tier": { "3-4": [1, 5], "4-5": [1, 10], "5-6": [1, 20] },
-          "layout_variants": ["grid","scattered","line","circle","ten-frame"],
-          "interaction_types": ["tap_to_count","drag_to_group","select_matching_number","add_one_more"]
+          "object_pool": [
+            "apple",
+            "star",
+            "duck",
+            "block",
+            "flower",
+            "bee",
+            "strawberry",
+            "car",
+            "shell",
+            "leaf",
+            "balloon",
+            "button"
+          ],
+          "count_range_by_tier": {
+            "3-4": [
+              1,
+              5
+            ],
+            "4-5": [
+              1,
+              10
+            ],
+            "5-6": [
+              1,
+              20
+            ]
+          },
+          "layout_variants": [
+            "grid",
+            "scattered",
+            "line",
+            "circle",
+            "ten-frame"
+          ],
+          "interaction_types": [
+            "tap_to_count",
+            "drag_to_group",
+            "select_matching_number",
+            "add_one_more"
+          ]
         },
         "instance_formula": "12 objects × ~15 counts × 5 layouts × 4 interactions",
-        "approx_instances": 567,
-        "new_in_v1_3": ["button,balloon objects","ten-frame layout","add_one_more"]
+        "approx_instances": 587,
+        "new_in_v1_3": [
+          "button,balloon objects",
+          "ten-frame layout",
+          "add_one_more"
+        ]
       }
     },
     {
@@ -55,17 +144,54 @@
       "category": "nature",
       "emoji": "🦁",
       "color": "#F59E0B",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "creature_sound_v1",
       "asset_bundle": "assets/animal_kingdom/",
       "generator_spec": {
         "parameters": {
-          "creature_pool": ["lion","elephant","monkey","zebra","giraffe","panda","tiger","bear","kangaroo","penguin","koala","otter"],
-          "sound_variants": ["roar","trumpet","chatter","bray","hum","growl","click"],
-          "habitat_scenes": ["jungle","savanna","arctic","forest","ocean","desert"],
-          "quiz_variants": ["match_sound","match_habitat","name_it","sort_big_small"]
+          "creature_pool": [
+            "lion",
+            "elephant",
+            "monkey",
+            "zebra",
+            "giraffe",
+            "panda",
+            "tiger",
+            "bear",
+            "kangaroo",
+            "penguin",
+            "koala",
+            "otter"
+          ],
+          "sound_variants": [
+            "roar",
+            "trumpet",
+            "chatter",
+            "bray",
+            "hum",
+            "growl",
+            "click"
+          ],
+          "habitat_scenes": [
+            "jungle",
+            "savanna",
+            "arctic",
+            "forest",
+            "ocean",
+            "desert"
+          ],
+          "quiz_variants": [
+            "match_sound",
+            "match_habitat",
+            "name_it",
+            "sort_big_small"
+          ]
         },
-        "approx_instances": 260
+        "approx_instances": 275
       }
     },
     {
@@ -74,17 +200,44 @@
       "category": "nature",
       "emoji": "🐦",
       "color": "#38BDF8",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "creature_sound_v1",
       "asset_bundle": "assets/bird_buddies/",
       "generator_spec": {
         "parameters": {
-          "creature_pool": ["sparrow","parrot","eagle","penguin","owl","flamingo","robin","toucan"],
-          "sound_variants": ["chirp","squawk","hoot","trill"],
-          "habitat_scenes": ["forest","wetland","city","mountain"],
-          "quiz_variants": ["match_sound","match_habitat","feather_color"]
+          "creature_pool": [
+            "sparrow",
+            "parrot",
+            "eagle",
+            "penguin",
+            "owl",
+            "flamingo",
+            "robin",
+            "toucan"
+          ],
+          "sound_variants": [
+            "chirp",
+            "squawk",
+            "hoot",
+            "trill"
+          ],
+          "habitat_scenes": [
+            "forest",
+            "wetland",
+            "city",
+            "mountain"
+          ],
+          "quiz_variants": [
+            "match_sound",
+            "match_habitat",
+            "feather_color"
+          ]
         },
-        "approx_instances": 260
+        "approx_instances": 275
       }
     },
     {
@@ -93,16 +246,42 @@
       "category": "creative",
       "emoji": "🎨",
       "color": "#F472B6",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "coloring_engine_v1",
       "asset_bundle": "assets/color_splash/",
       "generator_spec": {
         "parameters": {
-          "palette": ["red","blue","yellow","green","purple","orange","pink","teal"],
-          "sheets": ["rainbow","house","dino","car","flower","butterfly","train","castle"],
-          "interaction_types": ["tap_fill","drag_paint","match_color"]
+          "palette": [
+            "red",
+            "blue",
+            "yellow",
+            "green",
+            "purple",
+            "orange",
+            "pink",
+            "teal"
+          ],
+          "sheets": [
+            "rainbow",
+            "house",
+            "dino",
+            "car",
+            "flower",
+            "butterfly",
+            "train",
+            "castle"
+          ],
+          "interaction_types": [
+            "tap_fill",
+            "drag_paint",
+            "match_color"
+          ]
         },
-        "approx_instances": 170
+        "approx_instances": 195
       }
     },
     {
@@ -111,16 +290,28 @@
       "category": "literacy",
       "emoji": "✏️",
       "color": "#A78BFA",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "tracing_engine_v1",
       "asset_bundle": "assets/write_me/",
       "generator_spec": {
         "parameters": {
           "glyphs": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
-          "guide_types": ["dotted","arrow-guided","ghost","freehand"],
-          "strokes": ["single","double"]
+          "guide_types": [
+            "dotted",
+            "arrow-guided",
+            "ghost",
+            "freehand"
+          ],
+          "strokes": [
+            "single",
+            "double"
+          ]
         },
-        "approx_instances": 310
+        "approx_instances": 330
       }
     },
     {
@@ -129,17 +320,25 @@
       "category": "literacy",
       "emoji": "📚",
       "color": "#60A5FA",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "story_engine_v1",
       "asset_bundle": "assets/story_time/",
       "generator_spec": {
         "parameters": {
-          "books": 12,
-          "pages_per_book": [3, 5],
+          "books": 16,
+          "pages_per_book": [
+            3,
+            5
+          ],
           "read_along": true,
-          "comprehension_q": true
+          "comprehension_q": true,
+          "new_in_v1_4": 4
         },
-        "approx_instances": 270
+        "approx_instances": 330
       }
     },
     {
@@ -148,15 +347,32 @@
       "category": "literacy",
       "emoji": "🎵",
       "color": "#F472B6",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "rhyme_engine_v1",
       "asset_bundle": "assets/rhyme_time/",
       "generator_spec": {
         "parameters": {
-          "rhyme_families": ["-at","-an","-ip","-og","-et","-un","-ell","-ake"],
-          "interaction_types": ["match_rhyme","fill_rhyme","sing_along"]
+          "rhyme_families": [
+            "-at",
+            "-an",
+            "-ip",
+            "-og",
+            "-et",
+            "-un",
+            "-ell",
+            "-ake"
+          ],
+          "interaction_types": [
+            "match_rhyme",
+            "fill_rhyme",
+            "sing_along"
+          ]
         },
-        "approx_instances": 230
+        "approx_instances": 250
       }
     },
     {
@@ -165,16 +381,38 @@
       "category": "life",
       "emoji": "🖐️",
       "color": "#FB7185",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "body_engine_v1",
       "asset_bundle": "assets/body_senses/",
       "generator_spec": {
         "parameters": {
-          "body_parts": ["eyes","ears","nose","hands","feet","teeth","heart"],
-          "senses": ["see","hear","smell","touch","taste"],
-          "habits": ["wash_hands","brush_teeth","exercise"]
+          "body_parts": [
+            "eyes",
+            "ears",
+            "nose",
+            "hands",
+            "feet",
+            "teeth",
+            "heart"
+          ],
+          "senses": [
+            "see",
+            "hear",
+            "smell",
+            "touch",
+            "taste"
+          ],
+          "habits": [
+            "wash_hands",
+            "brush_teeth",
+            "exercise"
+          ]
         },
-        "approx_instances": 160
+        "approx_instances": 175
       }
     },
     {
@@ -183,16 +421,37 @@
       "category": "life",
       "emoji": "⛅",
       "color": "#38BDF8",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "weather_engine_v1",
       "asset_bundle": "assets/weather/",
       "generator_spec": {
         "parameters": {
-          "weather": ["sunny","rainy","cloudy","snowy","windy"],
-          "seasons": ["spring","summer","autumn","winter"],
-          "clothing": ["coat","boots","hat","scarf","shorts"]
+          "weather": [
+            "sunny",
+            "rainy",
+            "cloudy",
+            "snowy",
+            "windy"
+          ],
+          "seasons": [
+            "spring",
+            "summer",
+            "autumn",
+            "winter"
+          ],
+          "clothing": [
+            "coat",
+            "boots",
+            "hat",
+            "scarf",
+            "shorts"
+          ]
         },
-        "approx_instances": 160
+        "approx_instances": 175
       }
     },
     {
@@ -201,16 +460,39 @@
       "category": "life",
       "emoji": "😊",
       "color": "#FDE68A",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "emotions_engine_v1",
       "asset_bundle": "assets/emotions/",
       "generator_spec": {
         "parameters": {
-          "feelings": ["happy","sad","angry","scared","proud","calm","excited","shy"],
-          "scenarios": ["share_toy","fall_down","new_friend","loud_sound"],
-          "responses": ["hug","breathe","talk","draw"]
+          "feelings": [
+            "happy",
+            "sad",
+            "angry",
+            "scared",
+            "proud",
+            "calm",
+            "excited",
+            "shy"
+          ],
+          "scenarios": [
+            "share_toy",
+            "fall_down",
+            "new_friend",
+            "loud_sound"
+          ],
+          "responses": [
+            "hug",
+            "breathe",
+            "talk",
+            "draw"
+          ]
         },
-        "approx_instances": 160
+        "approx_instances": 180
       }
     },
     {
@@ -219,16 +501,43 @@
       "category": "life",
       "emoji": "👩‍⚕️",
       "color": "#34D399",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "helpers_engine_v1",
       "asset_bundle": "assets/helpers/",
       "generator_spec": {
         "parameters": {
-          "helpers": ["doctor","firefighter","teacher","farmer","police","chef","mail_carrier","builder"],
-          "tools": ["stethoscope","hose","chalk","tractor","badge","spoon","envelope","hammer"],
-          "places": ["hospital","fire_station","school","farm"]
+          "helpers": [
+            "doctor",
+            "firefighter",
+            "teacher",
+            "farmer",
+            "police",
+            "chef",
+            "mail_carrier",
+            "builder"
+          ],
+          "tools": [
+            "stethoscope",
+            "hose",
+            "chalk",
+            "tractor",
+            "badge",
+            "spoon",
+            "envelope",
+            "hammer"
+          ],
+          "places": [
+            "hospital",
+            "fire_station",
+            "school",
+            "farm"
+          ]
         },
-        "approx_instances": 160
+        "approx_instances": 180
       }
     },
     {
@@ -237,16 +546,35 @@
       "category": "creative",
       "emoji": "🥁",
       "color": "#A78BFA",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "music_engine_v1",
       "asset_bundle": "assets/music/",
       "generator_spec": {
         "parameters": {
-          "instruments": ["drum","piano","guitar","xylophone","shaker","trumpet"],
-          "patterns": ["tap_beat","copy_rhythm","sing_note"],
-          "songs": ["twinkle","rain_go_away","abc_song"]
+          "instruments": [
+            "drum",
+            "piano",
+            "guitar",
+            "xylophone",
+            "shaker",
+            "trumpet"
+          ],
+          "patterns": [
+            "tap_beat",
+            "copy_rhythm",
+            "sing_note"
+          ],
+          "songs": [
+            "twinkle",
+            "rain_go_away",
+            "abc_song"
+          ]
         },
-        "approx_instances": 160
+        "approx_instances": 185
       }
     },
     {
@@ -255,15 +583,32 @@
       "category": "cognitive",
       "emoji": "↔️",
       "color": "#F97316",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "opposites_engine_v1",
       "asset_bundle": "assets/opposites/",
       "generator_spec": {
         "parameters": {
-          "pairs": ["big/small","hot/cold","tall/short","fast/slow","heavy/light","loud/quiet","happy/sad","open/closed"],
-          "visuals": ["elephant/mouse","sun/ice","giraffe/turtle"]
+          "pairs": [
+            "big/small",
+            "hot/cold",
+            "tall/short",
+            "fast/slow",
+            "heavy/light",
+            "loud/quiet",
+            "happy/sad",
+            "open/closed"
+          ],
+          "visuals": [
+            "elephant/mouse",
+            "sun/ice",
+            "giraffe/turtle"
+          ]
         },
-        "approx_instances": 170
+        "approx_instances": 190
       }
     },
     {
@@ -272,16 +617,42 @@
       "category": "cognitive",
       "emoji": "🔷",
       "color": "#22D3EE",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "shape_engine_v1",
       "asset_bundle": "assets/shape_detective/",
       "generator_spec": {
         "parameters": {
-          "shape_pool": ["circle","square","triangle","star","hexagon","diamond","oval","rectangle","pentagon"],
-          "hidden_in_scenes": ["park","classroom","kitchen","beach","city","space"],
-          "sorting_rules": ["by_shape","by_color","by_size","by_sides"]
+          "shape_pool": [
+            "circle",
+            "square",
+            "triangle",
+            "star",
+            "hexagon",
+            "diamond",
+            "oval",
+            "rectangle",
+            "pentagon"
+          ],
+          "hidden_in_scenes": [
+            "park",
+            "classroom",
+            "kitchen",
+            "beach",
+            "city",
+            "space"
+          ],
+          "sorting_rules": [
+            "by_shape",
+            "by_color",
+            "by_size",
+            "by_sides"
+          ]
         },
-        "approx_instances": 410
+        "approx_instances": 430
       }
     },
     {
@@ -290,16 +661,35 @@
       "category": "cognitive",
       "emoji": "🧩",
       "color": "#84CC16",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "puzzle_engine_v1",
       "asset_bundle": "assets/puzzle_path/",
       "generator_spec": {
         "parameters": {
-          "piece_counts": [4, 6, 9, 12],
-          "pictures": ["farm","ocean","space","jungle","city","castle"],
-          "difficulty": ["edge_snap","free_drag"]
+          "piece_counts": [
+            4,
+            6,
+            9,
+            12
+          ],
+          "pictures": [
+            "farm",
+            "ocean",
+            "space",
+            "jungle",
+            "city",
+            "castle"
+          ],
+          "difficulty": [
+            "edge_snap",
+            "free_drag"
+          ]
         },
-        "approx_instances": 270
+        "approx_instances": 285
       }
     },
     {
@@ -308,15 +698,30 @@
       "category": "numeracy",
       "emoji": "✨",
       "color": "#A78BFA",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "math_engine_v1",
       "asset_bundle": "assets/math_magic/",
       "generator_spec": {
         "parameters": {
-          "concepts": ["patterns","sorting","more_less","add_within_10","subtract_within_10"],
-          "manipulatives": ["blocks","beads","ten_frame","number_line"]
+          "concepts": [
+            "patterns",
+            "sorting",
+            "more_less",
+            "add_within_10",
+            "subtract_within_10"
+          ],
+          "manipulatives": [
+            "blocks",
+            "beads",
+            "ten_frame",
+            "number_line"
+          ]
         },
-        "approx_instances": 330
+        "approx_instances": 350
       }
     },
     {
@@ -325,15 +730,32 @@
       "category": "cognitive",
       "emoji": "🃏",
       "color": "#14B8A6",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "memory_engine_v1",
       "asset_bundle": "assets/memory_match/",
       "generator_spec": {
         "parameters": {
-          "theme_decks": ["animals","fruits","vehicles","shapes","emotions","colors"],
-          "grid_sizes": [4, 6, 8, 12, 16]
+          "theme_decks": [
+            "animals",
+            "fruits",
+            "vehicles",
+            "shapes",
+            "emotions",
+            "colors"
+          ],
+          "grid_sizes": [
+            4,
+            6,
+            8,
+            12,
+            16
+          ]
         },
-        "approx_instances": 230
+        "approx_instances": 250
       }
     },
     {
@@ -342,15 +764,31 @@
       "category": "cognitive",
       "emoji": "👀",
       "color": "#F97316",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "categorization_engine_v1",
       "asset_bundle": "assets/odd_one/",
       "generator_spec": {
         "parameters": {
-          "categories": ["fruits","animals","shapes","clothes","vehicles","colors"],
-          "odd_rules": ["not_fruit","not_animal","not_shape","different_color"]
+          "categories": [
+            "fruits",
+            "animals",
+            "shapes",
+            "clothes",
+            "vehicles",
+            "colors"
+          ],
+          "odd_rules": [
+            "not_fruit",
+            "not_animal",
+            "not_shape",
+            "different_color"
+          ]
         },
-        "approx_instances": 270
+        "approx_instances": 285
       }
     },
     {
@@ -359,15 +797,30 @@
       "category": "cognitive",
       "emoji": "🔗",
       "color": "#60A5FA",
-      "age_tiers_supported": ["3-4", "4-5", "5-6"],
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
       "activity_generator": "sequence_engine_v1",
       "asset_bundle": "assets/sequence/",
       "generator_spec": {
         "parameters": {
-          "sequences": ["life_cycle","daily_routine","story_order","size_order","pattern_ab","pattern_abc"],
-          "lengths": [3, 4, 5]
+          "sequences": [
+            "life_cycle",
+            "daily_routine",
+            "story_order",
+            "size_order",
+            "pattern_ab",
+            "pattern_abc"
+          ],
+          "lengths": [
+            3,
+            4,
+            5
+          ]
         },
-        "approx_instances": 270
+        "approx_instances": 295
       }
     }
   ],
@@ -378,13 +831,14 @@
     "cognitive": 1500,
     "life_skills": 640,
     "creative": 330,
-    "total": 5427,
-    "live": 5247,
-    "note": "live = deterministic filtered by age-tier + deduplication; plan = theoretical max before dedup"
+    "total": 5850,
+    "live": 5672,
+    "note": "live = deterministic filtered; total = theoretical max before dedup (v1.4)"
   },
   "changelog": {
     "1.0.0": "5 modules prototype",
     "1.2.0": "20 modules engineCounts sum 4250",
-    "1.3.0": "20 modules expanded → 5247 live (+997 procedural), 12 books, 12 printables, expanded tracing/coloring/music/shape pools"
+    "1.3.0": "20 modules expanded → 5247 live (+997 procedural), 12 books, 12 printables, expanded tracing/coloring/music/shape pools",
+    "1.4.0": "5672 live (+425), 16 books (+4), 16 printables (+4), parent-tips.json plain language, mobile cropping fix (420px frame + flex-wrap + minmax), Live Data Layer → plain Today Summary"
   }
 }

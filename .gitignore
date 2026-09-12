@@ -34,3 +34,5 @@ DEPLOY_KEY.txt
 .ssh/
 .npm/
 uploads/
+.gitconfig
+push.sh
