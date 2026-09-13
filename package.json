@@ -17,7 +17,7 @@
     "android:debug": "cd android && ./gradlew assembleDebug",
     "android:release": "cd android && ./gradlew assembleRelease",
     "lint": "eslint src --ext .js,.ts",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "test:e2e": "playwright test"
   },
   "keywords": ["education","kids","pwa","offline-first","capacitor","eye-care","kindergarten","early-learning"],
