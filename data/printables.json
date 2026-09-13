@@ -1,31 +1,210 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "templates": [
-    { "id": "t1", "type": "tracing", "title": "Trace A-Z", "icon": "✏️", "desc": "Letter tracing a–z • dotted + rainbow", "level": 1, "pages": 2 },
-    { "id": "t2", "type": "counting", "title": "Count Apples", "icon": "🍎", "desc": "1–10 counting sheet • ten-frame", "level": 1, "pages": 1 },
-    { "id": "t3", "type": "coloring", "title": "Rainbow Coloring", "icon": "🌈", "desc": "Color the rainbow • 8 crayons", "level": 1, "pages": 1 },
-    { "id": "t4", "type": "matching", "title": "Animal Match", "icon": "🦁", "desc": "Match animal to sound & habitat", "level": 2, "pages": 1 },
-    { "id": "t5", "type": "tracing", "title": "Numbers 1–20", "icon": "🔢", "desc": "Number tracing • ghost guide", "level": 2, "pages": 2 },
-    { "id": "t6", "type": "matching", "title": "Shape Sort", "icon": "🔷", "desc": "Sort by shape / color / size", "level": 2, "pages": 1 },
-    { "id": "t7", "type": "tracing", "title": "My Name Trace", "icon": "✍️", "desc": "Personalised — uses profile name", "level": 1, "pages": 1, "new_in_v1_3": true },
-    { "id": "t8", "type": "counting", "title": "Add with Beads", "icon": "🧮", "desc": "Add within 10 • ten-frame & beads", "level": 3, "pages": 1, "new_in_v1_3": true },
-    { "id": "t9", "type": "coloring", "title": "Ocean Friends Colour", "icon": "🐠", "desc": "Ocean scene • color-by-number", "level": 2, "pages": 1, "new_in_v1_3": true },
-    { "id": "t10", "type": "matching", "title": "Feelings Flash", "icon": "😊", "desc": "Match face to feeling & coping", "level": 2, "pages": 1, "new_in_v1_3": true },
-    { "id": "t11", "type": "counting", "title": "Pattern Blocks", "icon": "🔷", "desc": "AB / ABC patterns • copy & extend", "level": 3, "pages": 1, "new_in_v1_3": true },
-    { "id": "t12", "type": "tracing", "title": "Rhyme Families -at/-an", "icon": "🎵", "desc": "Rhyming words • trace & match", "level": 3, "pages": 1, "new_in_v1_3": true },
-    { "id": "t13", "type": "matching", "title": "Shape Hunt", "icon": "🔍", "desc": "Find shapes hidden in busy scene", "level": 2, "pages": 1, "new_in_v1_4": true },
-    { "id": "t14", "type": "tracing", "title": "I Can Dress", "icon": "👕", "desc": "Weather → pick clothes • draw outfit", "level": 2, "pages": 1, "new_in_v1_4": true },
-    { "id": "t15", "type": "tracing", "title": "Kind Words Trace", "icon": "💬", "desc": "Trace please / thank you / sorry", "level": 1, "pages": 1, "new_in_v1_4": true },
-    { "id": "t16", "type": "matching", "title": "Five Senses Match", "icon": "👃", "desc": "Match sense to body part", "level": 2, "pages": 1, "new_in_v1_4": true }
+    {
+      "id": "t1",
+      "type": "tracing",
+      "title": "Trace A-Z",
+      "icon": "✏️",
+      "desc": "Letter tracing a–z • dotted + rainbow",
+      "level": 1,
+      "pages": 2
+    },
+    {
+      "id": "t2",
+      "type": "counting",
+      "title": "Count Apples",
+      "icon": "🍎",
+      "desc": "1–10 counting sheet • ten-frame",
+      "level": 1,
+      "pages": 1
+    },
+    {
+      "id": "t3",
+      "type": "coloring",
+      "title": "Rainbow Coloring",
+      "icon": "🌈",
+      "desc": "Color the rainbow • 8 crayons",
+      "level": 1,
+      "pages": 1
+    },
+    {
+      "id": "t4",
+      "type": "matching",
+      "title": "Animal Match",
+      "icon": "🦁",
+      "desc": "Match animal to sound & habitat",
+      "level": 2,
+      "pages": 1
+    },
+    {
+      "id": "t5",
+      "type": "tracing",
+      "title": "Numbers 1–20",
+      "icon": "🔢",
+      "desc": "Number tracing • ghost guide",
+      "level": 2,
+      "pages": 2
+    },
+    {
+      "id": "t6",
+      "type": "matching",
+      "title": "Shape Sort",
+      "icon": "🔷",
+      "desc": "Sort by shape / color / size",
+      "level": 2,
+      "pages": 1
+    },
+    {
+      "id": "t7",
+      "type": "tracing",
+      "title": "My Name Trace",
+      "icon": "✍️",
+      "desc": "Personalised — uses profile name",
+      "level": 1,
+      "pages": 1,
+      "new_in_v1_3": true
+    },
+    {
+      "id": "t8",
+      "type": "counting",
+      "title": "Add with Beads",
+      "icon": "🧮",
+      "desc": "Add within 10 • ten-frame & beads",
+      "level": 3,
+      "pages": 1,
+      "new_in_v1_3": true
+    },
+    {
+      "id": "t9",
+      "type": "coloring",
+      "title": "Ocean Friends Colour",
+      "icon": "🐠",
+      "desc": "Ocean scene • color-by-number",
+      "level": 2,
+      "pages": 1,
+      "new_in_v1_3": true
+    },
+    {
+      "id": "t10",
+      "type": "matching",
+      "title": "Feelings Flash",
+      "icon": "😊",
+      "desc": "Match face to feeling & coping",
+      "level": 2,
+      "pages": 1,
+      "new_in_v1_3": true
+    },
+    {
+      "id": "t11",
+      "type": "counting",
+      "title": "Pattern Blocks",
+      "icon": "🔷",
+      "desc": "AB / ABC patterns • copy & extend",
+      "level": 3,
+      "pages": 1,
+      "new_in_v1_3": true
+    },
+    {
+      "id": "t12",
+      "type": "tracing",
+      "title": "Rhyme Families -at/-an",
+      "icon": "🎵",
+      "desc": "Rhyming words • trace & match",
+      "level": 3,
+      "pages": 1,
+      "new_in_v1_3": true
+    },
+    {
+      "id": "t13",
+      "type": "matching",
+      "title": "Shape Hunt",
+      "icon": "🔍",
+      "desc": "Find shapes hidden in busy scene",
+      "level": 2,
+      "pages": 1,
+      "new_in_v1_4": true
+    },
+    {
+      "id": "t14",
+      "type": "tracing",
+      "title": "I Can Dress",
+      "icon": "👕",
+      "desc": "Weather → pick clothes • draw outfit",
+      "level": 2,
+      "pages": 1,
+      "new_in_v1_4": true
+    },
+    {
+      "id": "t15",
+      "type": "tracing",
+      "title": "Kind Words Trace",
+      "icon": "💬",
+      "desc": "Trace please / thank you / sorry",
+      "level": 1,
+      "pages": 1,
+      "new_in_v1_4": true
+    },
+    {
+      "id": "t16",
+      "type": "matching",
+      "title": "Five Senses Match",
+      "icon": "👃",
+      "desc": "Match sense to body part",
+      "level": 2,
+      "pages": 1,
+      "new_in_v1_4": true
+    },
+    {
+      "id": "t17",
+      "type": "counting",
+      "title": "Number Bonds to 10",
+      "icon": "🔢",
+      "desc": "Make 10 with dots & frames",
+      "level": 3,
+      "pages": 1,
+      "new_in_v1_5": true
+    },
+    {
+      "id": "t18",
+      "type": "matching",
+      "title": "Emotion Puppets",
+      "icon": "🎭",
+      "desc": "Cut & play feeling puppets",
+      "level": 2,
+      "pages": 2,
+      "new_in_v1_5": true
+    },
+    {
+      "id": "t19",
+      "type": "coloring",
+      "title": "Weather Wheel",
+      "icon": "🌤️",
+      "desc": "Color wheel + dress for weather",
+      "level": 2,
+      "pages": 1,
+      "new_in_v1_5": true
+    },
+    {
+      "id": "t20",
+      "type": "tracing",
+      "title": "Music Notes Trace",
+      "icon": "🎵",
+      "desc": "Trace notes & clap rhythm",
+      "level": 2,
+      "pages": 1,
+      "new_in_v1_5": true
+    }
   ],
   "meta": {
-    "total": 16,
+    "total": 20,
     "local_pdf": "jspdf",
     "fallback": "window.print",
     "qr_deeplink": "littlelearn://activity/<id>",
     "a4": true,
     "offline": true,
     "new_in_v1_3": 6,
-    "new_in_v1_4": 4
+    "new_in_v1_4": 4,
+    "new_in_v1_5": 4
   }
 }

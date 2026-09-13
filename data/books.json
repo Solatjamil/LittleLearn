@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "books": [
     {
       "id": "b1",
@@ -13,7 +13,14 @@
         "Moral: Sharing makes light brighter."
       ],
       "words": 32,
-      "comprehension": { "q": "Who did Leo share with?", "opts": ["Friends", "Nobody"], "a": "Friends" }
+      "comprehension": {
+        "q": "Who did Leo share with?",
+        "opts": [
+          "Friends",
+          "Nobody"
+        ],
+        "a": "Friends"
+      }
     },
     {
       "id": "b2",
@@ -217,15 +224,72 @@
       ],
       "words": 25,
       "new_in_v1_4": true
+    },
+    {
+      "id": "b17",
+      "title": "The Helpful Robot",
+      "emoji": "🤖",
+      "level": 3,
+      "pages": [
+        "Robo beeped: “Need help?”",
+        "He carried books for the teacher.",
+        "He sorted blocks big to small.",
+        "Friends cheered: “Thank you, Robo!”"
+      ],
+      "words": 27,
+      "new_in_v1_5": true
+    },
+    {
+      "id": "b18",
+      "title": "Counting Stars",
+      "emoji": "⭐",
+      "level": 2,
+      "pages": [
+        "1 star, 2 stars, 3 stars shine.",
+        "Count 10 stars in the night sky.",
+        "Leo counts too — one by one.",
+        "Can you find the North Star? ✨"
+      ],
+      "words": 28,
+      "new_in_v1_5": true
+    },
+    {
+      "id": "b19",
+      "title": "Friendship Garden",
+      "emoji": "🌻",
+      "level": 2,
+      "pages": [
+        "Aya planted seeds with Sam.",
+        "They watered every sunny day.",
+        "Flowers bloomed — yellow and red!",
+        "Sharing makes gardens grow. 🌼"
+      ],
+      "words": 26,
+      "new_in_v1_5": true
+    },
+    {
+      "id": "b20",
+      "title": "Bedtime Routine",
+      "emoji": "🌙",
+      "level": 1,
+      "pages": [
+        "Brush teeth — scrub, scrub!",
+        "Read a short story with Mama.",
+        "Breathe slow — eyes close.",
+        "Good night, stars. Sleep tight! 😴"
+      ],
+      "words": 25,
+      "new_in_v1_5": true
     }
   ],
   "meta": {
-    "total": 16,
+    "total": 20,
     "read_along": true,
     "offline": true,
     "avg_words_per_book": 26,
     "illstration_style": "flat, warm, high-contrast, blue-light-safe",
     "new_in_v1_3": 4,
-    "new_in_v1_4": 4
+    "new_in_v1_4": 4,
+    "new_in_v1_5": 4
   }
 }

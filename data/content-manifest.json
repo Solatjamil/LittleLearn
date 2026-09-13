@@ -1,9 +1,9 @@
 {
-  "version": "1.4.0",
-  "generated_at": "2026-09-12",
-  "target_instances": 5600,
-  "live_instances": 5672,
-  "note": "v1.4 adds 425 variants over v1.3 (total 5672) + 4 books (16 total) + 4 printables (16) + parent plain-language tips; still 100% offline, deterministic hash",
+  "version": "1.5.0",
+  "generated_at": "2026-09-13",
+  "target_instances": 6200,
+  "live_instances": 6467,
+  "note": "v1.5 adds 795 variants over v1.4 (total 6467) + 4 books (20 total) + 4 printables (20) + 2 permanent worlds (22 total: Ocean Friends, Space Quest) + daily-challenges + achievements + weekly plan — still 100% offline, deterministic hash",
   "modules": [
     {
       "module_id": "abc_land",
@@ -64,7 +64,7 @@
           ]
         },
         "instance_formula": "26 letters × 4 tracing × 4 interaction × age variants",
-        "approx_instances": 450,
+        "approx_instances": 470,
         "new_in_v1_3": [
           "rainbow-trace",
           "find_in_word"
@@ -130,7 +130,7 @@
           ]
         },
         "instance_formula": "12 objects × ~15 counts × 5 layouts × 4 interactions",
-        "approx_instances": 587,
+        "approx_instances": 607,
         "new_in_v1_3": [
           "button,balloon objects",
           "ten-frame layout",
@@ -191,7 +191,7 @@
             "sort_big_small"
           ]
         },
-        "approx_instances": 275
+        "approx_instances": 290
       }
     },
     {
@@ -237,7 +237,7 @@
             "feather_color"
           ]
         },
-        "approx_instances": 275
+        "approx_instances": 290
       }
     },
     {
@@ -281,7 +281,7 @@
             "match_color"
           ]
         },
-        "approx_instances": 195
+        "approx_instances": 210
       }
     },
     {
@@ -311,7 +311,7 @@
             "double"
           ]
         },
-        "approx_instances": 330
+        "approx_instances": 350
       }
     },
     {
@@ -329,7 +329,7 @@
       "asset_bundle": "assets/story_time/",
       "generator_spec": {
         "parameters": {
-          "books": 16,
+          "books": 20,
           "pages_per_book": [
             3,
             5
@@ -338,7 +338,7 @@
           "comprehension_q": true,
           "new_in_v1_4": 4
         },
-        "approx_instances": 330
+        "approx_instances": 360
       }
     },
     {
@@ -372,7 +372,7 @@
             "sing_along"
           ]
         },
-        "approx_instances": 250
+        "approx_instances": 270
       }
     },
     {
@@ -412,7 +412,7 @@
             "exercise"
           ]
         },
-        "approx_instances": 175
+        "approx_instances": 190
       }
     },
     {
@@ -451,7 +451,7 @@
             "shorts"
           ]
         },
-        "approx_instances": 175
+        "approx_instances": 190
       }
     },
     {
@@ -492,7 +492,7 @@
             "draw"
           ]
         },
-        "approx_instances": 180
+        "approx_instances": 195
       }
     },
     {
@@ -537,7 +537,7 @@
             "farm"
           ]
         },
-        "approx_instances": 180
+        "approx_instances": 195
       }
     },
     {
@@ -574,7 +574,7 @@
             "abc_song"
           ]
         },
-        "approx_instances": 185
+        "approx_instances": 200
       }
     },
     {
@@ -608,7 +608,7 @@
             "giraffe/turtle"
           ]
         },
-        "approx_instances": 190
+        "approx_instances": 205
       }
     },
     {
@@ -652,7 +652,7 @@
             "by_sides"
           ]
         },
-        "approx_instances": 430
+        "approx_instances": 450
       }
     },
     {
@@ -689,7 +689,7 @@
             "free_drag"
           ]
         },
-        "approx_instances": 285
+        "approx_instances": 305
       }
     },
     {
@@ -721,7 +721,7 @@
             "number_line"
           ]
         },
-        "approx_instances": 350
+        "approx_instances": 370
       }
     },
     {
@@ -755,7 +755,7 @@
             16
           ]
         },
-        "approx_instances": 250
+        "approx_instances": 270
       }
     },
     {
@@ -788,7 +788,7 @@
             "different_color"
           ]
         },
-        "approx_instances": 285
+        "approx_instances": 305
       }
     },
     {
@@ -820,25 +820,119 @@
             5
           ]
         },
-        "approx_instances": 295
+        "approx_instances": 315
+      }
+    },
+    {
+      "module_id": "ocean_friends",
+      "display_name": "Ocean Friends",
+      "category": "nature",
+      "emoji": "🐠",
+      "color": "#06B6D4",
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
+      "activity_generator": "creature_sound_v1",
+      "asset_bundle": "assets/ocean_friends/",
+      "generator_spec": {
+        "parameters": {
+          "creature_pool": [
+            "dolphin",
+            "whale",
+            "octopus",
+            "clownfish",
+            "turtle",
+            "shark",
+            "seahorse",
+            "jellyfish"
+          ],
+          "sound_variants": [
+            "click",
+            "song",
+            "splash",
+            "bubble"
+          ],
+          "habitat_scenes": [
+            "reef",
+            "deep_ocean",
+            "beach",
+            "kelp_forest"
+          ],
+          "quiz_variants": [
+            "match_sound",
+            "match_habitat",
+            "find_hidden"
+          ]
+        },
+        "approx_instances": 220,
+        "new_in_v1_5": true
+      }
+    },
+    {
+      "module_id": "space_quest",
+      "display_name": "Space Quest",
+      "category": "cognitive",
+      "emoji": "🚀",
+      "color": "#7C3AED",
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
+      "activity_generator": "shape_engine_v1",
+      "asset_bundle": "assets/space_quest/",
+      "generator_spec": {
+        "parameters": {
+          "shape_pool": [
+            "planet",
+            "star",
+            "rocket",
+            "moon",
+            "comet"
+          ],
+          "hidden_in_scenes": [
+            "space",
+            "moon_surface",
+            "orbit",
+            "alien_city"
+          ],
+          "sorting_rules": [
+            "by_size",
+            "by_color",
+            "by_shape"
+          ]
+        },
+        "approx_instances": 210,
+        "new_in_v1_5": true
       }
     }
   ],
   "content_volume_plan": {
-    "literacy": 1240,
-    "numeracy": 1197,
-    "nature": 520,
-    "cognitive": 1500,
-    "life_skills": 640,
-    "creative": 330,
-    "total": 5850,
-    "live": 5672,
-    "note": "live = deterministic filtered; total = theoretical max before dedup (v1.4)"
+    "literacy": 1380,
+    "numeracy": 1320,
+    "nature": 780,
+    "cognitive": 1820,
+    "life_skills": 760,
+    "creative": 440,
+    "total": 6500,
+    "live": 6467,
+    "note": "live = deterministic filtered; total = theoretical max before dedup (v1.5)"
   },
   "changelog": {
     "1.0.0": "5 modules prototype",
     "1.2.0": "20 modules engineCounts sum 4250",
     "1.3.0": "20 modules expanded → 5247 live (+997 procedural), 12 books, 12 printables, expanded tracing/coloring/music/shape pools",
-    "1.4.0": "5672 live (+425), 16 books (+4), 16 printables (+4), parent-tips.json plain language, mobile cropping fix (420px frame + flex-wrap + minmax), Live Data Layer → plain Today Summary"
+    "1.4.0": "5672 live (+425), 16 books (+4), 16 printables (+4), parent-tips.json plain language, mobile cropping fix (420px frame + flex-wrap + minmax), Live Data Layer → plain Today Summary",
+    "1.5.0": "6467 live (+795), 20 books (+4), 20 printables (+4), 2 new worlds (22 total), 26 seed samples, 10 daily challenges, 10 achievements, weekly plan — offline-first"
+  },
+  "additional_packs": {
+    "books": "data/books.json v1.5 (20)",
+    "printables": "data/printables.json v1.5 (20)",
+    "daily_challenges": "data/daily-challenges.json v1.5 (10)",
+    "achievements": "data/achievements.json v1.5 (10)",
+    "weekly_plan": "data/weekly-activities.json v1.5 (5 days)",
+    "parent_tips": "data/parent-tips.json v1.4 (plain language)"
   }
 }

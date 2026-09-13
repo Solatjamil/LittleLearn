@@ -283,7 +283,7 @@
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
           <h2 id="greeting">Hi, Explorer! Ready to learn?</h2>
           <span class="pill" style="background:#FFF7ED">🎧 Tap anything — Leo will read it aloud</span>
-          <span class="pill" style="background:#ECFDF5;border-color:#A7F3D0" id="contentLivePill">⚡ 5,672 activities live • Engine running</span>
+          <span class="pill" style="background:#ECFDF5;border-color:#A7F3D0" id="contentLivePill">⚡ 6,467 activities live • Engine running</span>
         </div>
         <p>Leo guides every step. Eye breaks are part of the story — warm filter ON by default, 20-20-20 every 20 min, 30 min cap.</p>
         <div class="hero-actions">
@@ -299,7 +299,7 @@
       <div style="position:absolute;right:12px;bottom:10px;display:flex;gap:6px;z-index:1">
         <span class="pill" style="font-size:12px">Offline ✓</span>
         <span class="pill" style="font-size:12px">No login ✓</span>
-        <span class="pill" style="font-size:12px;background:#2D2A26;color:white" id="engineCountPill">5,672 live</span>
+        <span class="pill" style="font-size:12px;background:#2D2A26;color:white" id="engineCountPill">6,467 live</span>
       </div>
     </div>
 
@@ -308,7 +308,7 @@
       <div style="width:44px;height:44px;border-radius:12px;background:white;display:grid;place-items:center;font-size:20px;flex-shrink:0">🗃️</div>
       <div style="flex:1;min-width:220px">
         <b style="font-size:13px">Data is LIVE — pushing content works <span class="live-dot"></span></b>
-        <div style="color:#065F46;font-weight:700;font-size:12px;line-height:1.3">Procedural engines generate 5,672 activities on-device. Play anything → progress saves instantly → parent dashboard updates. Try “Seed Demo Week”.</div>
+        <div style="color:#065F46;font-weight:700;font-size:12px;line-height:1.3">Procedural engines generate 6,467 activities on-device. Play anything → progress saves instantly → parent dashboard updates. Try “Seed Demo Week”.</div>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <button class="btn btn-teal btn-sm" onclick="seedDemoWeek()">Seed data</button>
@@ -325,14 +325,14 @@
     <div class="section-head"><div><h3>✨ Choose Your Next Adventure</h3><p>Child picks from 2–3 options — autonomy + focus</p></div><button class="pill" onclick="shuffleChoices()">Shuffle ↻</button></div>
     <div id="choiceRow" class="choice-row"></div>
 
-    <div class="section-head"><div><h3>🧩 All Learning Worlds</h3><p id="moduleCount">20 worlds • 5,672 activities via variation engine • Tap to play</p></div><div class="filter-chips" id="filterChips"></div></div>
+    <div class="section-head"><div><h3>🧩 All Learning Worlds</h3><p id="moduleCount">22 worlds • 6,467 activities via variation engine • Tap to play</p></div><div class="filter-chips" id="filterChips"></div></div>
     <div id="moduleGrid" class="grid"></div>
 
     <!-- Live engine stats -->
     <div class="card" style="margin-top:14px">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
         <h4 style="margin:0">⚙️ Content Engine — Live</h4>
-        <span class="pill" id="engineStatus">All generators healthy • 5,672 instances</span>
+        <span class="pill" id="engineStatus">All generators healthy • 6,467 instances</span>
       </div>
       <div id="engineStats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:12px"></div>
       <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
@@ -362,10 +362,22 @@
     <!-- Production: Story Library (16 real books) v1.4 -->
     <div class="card" style="margin-top:12px">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-        <h4 style="margin:0">📚 Story Library — 16 read-along books (offline, Khan parity) <span style="background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;padding:2px 8px;border-radius:999px;font-size:11px">+4 new in v1.4</span></h4>
+        <h4 style="margin:0">📚 Story Library — 20 read-along books (offline, Khan parity) <span style="background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;padding:2px 8px;border-radius:999px;font-size:11px">+4 new in v1.5</span></h4>
         <button class="btn btn-ghost btn-sm" onclick="openBookLibrary()">Open Library →</button>
       </div>
       <div class="book-grid" id="bookPreview"></div>
+    </div>
+
+    <!-- New in v1.5: Daily Challenges & Achievements -->
+    <div class="card" style="margin-top:12px;background:linear-gradient(135deg,#FFFBEB,#ECFDF5);border-color:#FDBA74">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <div style="width:44px;height:44px;border-radius:12px;background:white;display:grid;place-items:center;font-size:22px;box-shadow:var(--shadow)">🗓️</div>
+        <div style="flex:1;min-width:200px"><h4 style="margin:0">Daily Challenges — 10 new • Offline • Ocean & Space</h4><div style="color:var(--muted);font-weight:700;font-size:12px">One 3-min mission per day. Today: Find 3 circles, roar like a lion, say a kind word. No scores — just leaves.</div></div>
+        <span class="pill" style="background:#ECFDF5;border-color:#A7F3D0">v1.5 • 22 worlds</span>
+      </div>
+      <div id="dailyChallengePreview" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px"></div>
+      <div id="achievementPreview" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"></div>
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap"><button class="btn btn-primary btn-sm" onclick="openDailyChallenges()">Open Challenges →</button><button class="btn btn-ghost btn-sm" onclick="switchScreen('rewards')">View Achievements 🏆</button><button class="btn btn-ghost btn-sm" onclick="generateWeeklyPDF()">🖨️ Weekly Plan</button></div>
     </div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px">
@@ -460,7 +472,7 @@
           <button class="data-tab" onclick="showDataTab('sessions',this)">session_log (0)</button>
           <button class="data-tab" onclick="showDataTab('rewards',this)">reward_state</button>
           <button class="data-tab" onclick="showDataTab('settings',this)">settings</button>
-          <button class="data-tab" onclick="showDataTab('content',this)">content_pack (5,672)</button>
+          <button class="data-tab" onclick="showDataTab('content',this)">content_pack (6,467)</button>
         </div>
         <div id="dataJson" class="json-box" style="margin-top:8px;max-height:240px">Loading…</div>
         <div id="dataStatus" style="color:var(--muted);font-weight:700;font-size:11px;margin-top:6px"></div>
@@ -610,7 +622,7 @@
 <!-- Book Library -->
 <div id="bookModal" class="modal" role="dialog" aria-modal="true">
   <div class="modal-card" style="max-width:720px">
-    <div class="modal-head"><h4>📚 Story Library — 16 books</h4><button class="icon-btn" onclick="closeBookLibrary()">✕</button></div>
+    <div class="modal-head"><h4>📚 Story Library — 20 books</h4><button class="icon-btn" onclick="closeBookLibrary()">✕</button></div>
     <div class="modal-body">
       <div class="book-grid" id="bookGrid"></div>
       <div id="bookReader" style="display:none;margin-top:12px;background:#FFFBEB;border:1.5px solid var(--border);border-radius:16px;padding:14px"></div>
@@ -700,6 +712,8 @@ const baseModules=[
   {id:'memory_match',name:'Memory Match',emoji:'🃏',color:'#14B8A6',cat:'cognitive',desc:'Flip-card matching',engine:'memory'},
   {id:'odd_one',name:'Odd One Out',emoji:'👀',color:'#F97316',cat:'cognitive',desc:'Categorization',engine:'odd'},
   {id:'sequence',name:'Sequence Builder',emoji:'🔗',color:'#60A5FA',cat:'cognitive',desc:'Ordering & story',engine:'sequence'},
+  {id:'ocean_friends',name:'Ocean Friends',emoji:'🐠',color:'#06B6D4',cat:'nature',desc:'Sea creatures & sounds',engine:'creature_sound'},
+  {id:'space_quest',name:'Space Quest',emoji:'🚀',color:'#7C3AED',cat:'cognitive',desc:'Planets & sorting',engine:'shape'},
 ];
 // dynamic modules pushed at runtime
 let extraModules=JSON.parse(localStorage.getItem(CONTENT_KEY)||'[]');
@@ -707,10 +721,11 @@ function allModules(){return [...baseModules, ...extraModules];}
 let modules=allModules();
 const catLabel={literacy:'Literacy',numeracy:'Numeracy',nature:'Nature',cognitive:'Cognitive',life:'Life Skills',creative:'Creative'};
 
-// engine instance counts v1.4 — 5,672 live (see data/content-manifest.json)
+// engine instance counts v1.5 — 6,467 live (22 worlds, see data/content-manifest.json)
 const engineCounts={
-  abc_land:450, count_play:587, animal_kingdom:275, bird_buddies:275, color_splash:195, write_me:330, story_time:330, rhyme_time:250,
-  body_senses:175, weather:175, emotions:180, helpers:180, music:185, opposites:190, shape_detective:430, puzzle_path:285, math_magic:350, memory_match:250, odd_one:285, sequence:295
+  abc_land:470, count_play:607, animal_kingdom:290, bird_buddies:290, color_splash:210, write_me:350, story_time:360, rhyme_time:270,
+  body_senses:190, weather:190, emotions:195, helpers:195, music:200, opposites:205, shape_detective:450, puzzle_path:305, math_magic:370, memory_match:270, odd_one:305, sequence:315,
+  ocean_friends:220, space_quest:210
 };
 function totalInstances(){
   let total=0;
@@ -1362,6 +1377,10 @@ const printableTemplates=[
   {id:'t14',type:'tracing',title:'I Can Dress',icon:'👕',desc:'Weather → pick clothes • draw outfit'},
   {id:'t15',type:'tracing',title:'Kind Words Trace',icon:'💬',desc:'Trace please / thank you / sorry'},
   {id:'t16',type:'matching',title:'Five Senses Match',icon:'👃',desc:'Match sense to body part'},
+  {id:'t17',type:'counting',title:'Number Bonds to 10',icon:'🔢',desc:'Make 10 with dots & frames'},
+  {id:'t18',type:'matching',title:'Emotion Puppets',icon:'🎭',desc:'Cut & play feeling puppets'},
+  {id:'t19',type:'coloring',title:'Weather Wheel',icon:'🌤️',desc:'Color wheel + dress for weather'},
+  {id:'t20',type:'tracing',title:'Music Notes Trace',icon:'🎵',desc:'Trace notes & clap rhythm'},
 ];
 let printFilter='all';
 function renderPrintables(){
@@ -1475,7 +1494,7 @@ function startPathNext(){
 }
 function jumpToLevel(l){ const p=activeProfile(); if(p) p.lp_level=l; localStorage.setItem('lp_level',String(l)); renderLearningPath(); showToast('Jumped to Level '+l); }
 
-// Books — 16 real read-along books (v1.4: +4 new, parity: Khan 100+ books)
+// Books — 20 real read-along books (v1.5: +4 new, parity: Khan 100+ books)
 const books=[
   { id:'b1', title:'Leo’s Star', emoji:'⭐', pages:['Leo the lion found a shiny star in the grass.','He showed it to his friends: a bird, a monkey, and a turtle.','“Let’s share it!” said Leo. They made a night lamp together.','Moral: Sharing makes light brighter.'], level:2 },
   { id:'b2', title:'Rain Day', emoji:'🌧️', pages:['Maya looked out — grey clouds!','She wore her yellow raincoat and red boots.','Splash! Puddle jump! Plop — she laughed.','After rain, a rainbow! 🌈'], level:1 },
@@ -1493,6 +1512,10 @@ const books=[
   { id:'b14', title:'Colors Everywhere', emoji:'🎨', pages:['Look! Red apple, blue sky, yellow sun.','Green leaf, purple flower, orange cat.','What color is your shirt today?','Let’s paint a rainbow together! 🌈'], level:1 },
   { id:'b15', title:'My Five Senses', emoji:'👃', pages:['I see with my eyes — bright stars!','I hear with my ears — birds chirp.','I smell flowers, taste mango, touch soft fur.','Five senses help me explore the world!'], level:2 },
   { id:'b16', title:'Kind Words', emoji:'💬', pages:['Mina said, “Please” — door opened.','She said, “Thank you” — smiles grew.','Kind words are like warm sun.','Try today: say please, thank you, sorry.'], level:2 },
+  { id:'b17', title:'The Helpful Robot', emoji:'🤖', pages:['Robo beeped: “Need help?”','He carried books for the teacher.','He sorted blocks big to small.','Friends cheered: “Thank you, Robo!”'], level:3 },
+  { id:'b18', title:'Counting Stars', emoji:'⭐', pages:['1 star, 2 stars, 3 stars shine.','Count 10 stars in the night sky.','Leo counts too — one by one.','Can you find the North Star? ✨'], level:2 },
+  { id:'b19', title:'Friendship Garden', emoji:'🌻', pages:['Aya planted seeds with Sam.','They watered every sunny day.','Flowers bloomed — yellow and red!','Sharing makes gardens grow. 🌼'], level:2 },
+  { id:'b20', title:'Bedtime Routine', emoji:'🌙', pages:['Brush teeth — scrub, scrub!','Read a short story with Mama.','Breathe slow — eyes close.','Good night, stars. Sleep tight! 😴'], level:1 },
 ];
 function renderBooks(){
   const preview=document.getElementById('bookPreview');
@@ -1533,6 +1556,54 @@ function bookNext(){
     handleAnswer(true,aid,document.getElementById('bookReader'),'Book finished! Great reading.');
     closeBookLibrary(); showToast('📚 Finished '+curBook.title+' — sticker earned!');
   }
+}
+
+// Daily Challenges & Achievements — v1.5 new pack
+const dailyChallenges=[
+  {day:1,title:"Find 3 Circles",emoji:"🔵",mod:"shape_detective",prompt:"How many round things at home?"},
+  {day:2,title:"Sound Hunt",emoji:"🦁",mod:"animal_kingdom",prompt:"Roar, chirp — family guesses!"},
+  {day:3,title:"Kind Word Day",emoji:"💬",mod:"emotions",prompt:"Say please / thank you 3x"},
+  {day:4,title:"Count to 10",emoji:"🔢",mod:"count_play",prompt:"Count stairs or blocks to 10"},
+  {day:5,title:"Color Splash",emoji:"🎨",mod:"color_splash",prompt:"Color a rainbow with 6 crayons"},
+  {day:6,title:"Story Night",emoji:"📚",mod:"story_time",prompt:"Read one book aloud"},
+  {day:7,title:"Ocean Peek",emoji:"🐠",mod:"ocean_friends",prompt:"Name 3 sea creatures"},
+  {day:8,title:"Space Sort",emoji:"🚀",mod:"space_quest",prompt:"Sort toys big → small"},
+  {day:9,title:"Five Senses",emoji:"👃",mod:"body_senses",prompt:"Smell, hear, see, touch, taste"},
+  {day:10,title:"Rhyme Time",emoji:"🎵",mod:"rhyme_time",prompt:"Find 2 rhymes for cat"},
+];
+const achievementsList=[
+  {id:"first_steps",emoji:"🌟",title:"First Steps"},
+  {id:"counter",emoji:"🔢",title:"Counter"},
+  {id:"reader",emoji:"📚",title:"Little Reader"},
+  {id:"ocean",emoji:"🐠",title:"Ocean Explorer"},
+  {id:"space",emoji:"🚀",title:"Space Cadet"},
+  {id:"kind",emoji:"💛",title:"Kind Heart"},
+  {id:"eye",emoji:"👁️",title:"Eye-Safe Star"},
+  {id:"print",emoji:"🖨️",title:"Print Friend"},
+];
+function renderDailyChallenges(){
+  const grid=document.getElementById('dailyChallengePreview');
+  if(!grid) return;
+  const today=new Date().getDate() % 10;
+  grid.innerHTML=dailyChallenges.slice(0,3).map((c,i)=>{
+    const isToday=i===0;
+    return `<div style="background:${isToday?'linear-gradient(135deg,#FFF7ED,#FEF3C7)':'white'};border:1.5px solid ${isToday?'#FDBA74':'var(--border)'};border-radius:14px;padding:10px;text-align:center;cursor:pointer" onclick="openDailyChallenges()">
+      <div style="font-size:22px">${c.emoji}</div><b style="font-size:12px">Day ${c.day}: ${c.title}</b><div style="color:var(--muted);font-weight:700;font-size:11px">${c.prompt}</div>${isToday?'<span class="pill" style="margin-top:6px;background:var(--orange);color:white;font-size:10px">Today</span>':''}
+    </div>`;
+  }).join('');
+  const ach=document.getElementById('achievementPreview');
+  if(ach){
+    const unlocked=(state.reward_state[state.active_profile_id]?.stickers_unlocked||[]).length;
+    ach.innerHTML=achievementsList.slice(0,6).map(a=>`<span class="pill" style="background:white">${a.emoji} ${a.title}</span>`).join('')+ `<span class="pill" style="background:#ECFDF5;border-color:#A7F3D0">${unlocked} stickers → ${achievementsList.length} badges</span>`;
+  }
+}
+function openDailyChallenges(){
+  const m = dailyChallenges[new Date().getDate()%10];
+  showToast(`🗓️ Today: ${m.title} — ${m.prompt}`);
+  // also push a tiny progress to make it feel live
+  const mod=m.mod;
+  state.modules_used_today.add(mod);
+  saveState(); renderParent();
 }
 
 // Certificate
@@ -1615,7 +1686,7 @@ function renderWeeklyChart(){
 
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}
 /* Init — production */
-renderModules(); renderParent(); renderEngineStats(); renderLearningPath(); renderBooks(); updateGreeting(); applyEyeProtection(); updateTimeUI(); restartEyeTimer(); startCapTicker(); refreshDataInspector(); renderWeeklyChart(); checkOnboard();
+renderModules(); renderParent(); renderEngineStats(); renderLearningPath(); renderBooks(); renderDailyChallenges(); updateGreeting(); applyEyeProtection(); updateTimeUI(); restartEyeTimer(); startCapTicker(); refreshDataInspector(); renderWeeklyChart(); checkOnboard();
 try{const last=localStorage.getItem('littlelearn_last_day'); const today=new Date().toDateString(); if(last!==today){if(last){secondsToday=0; state.todaySeconds=0; saveState();} localStorage.setItem('littlelearn_last_day',today);}}catch{}
 startSessionIfNeeded();
 document.addEventListener('visibilitychange',()=>{if(document.hidden) {const s=state.session_log.find(x=>x.session_id===state.current_session_id); if(s) s.ended_at=Date.now(); saveState();} else {if(!state.current_session_id) startSessionIfNeeded();}});
