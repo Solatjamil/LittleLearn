@@ -1,5 +1,5 @@
 {
-  "version": "1.5.0",
+  "version": "1.6.0",
   "templates": [
     {
       "id": "t1",
@@ -194,10 +194,50 @@
       "level": 2,
       "pages": 1,
       "new_in_v1_5": true
+    },
+    {
+      "id": "t21",
+      "type": "coloring",
+      "title": "Farm Coloring",
+      "icon": "🚜",
+      "desc": "Farm scene • crayons & counting",
+      "level": 2,
+      "pages": 1,
+      "new_in_v1_6": true
+    },
+    {
+      "id": "t22",
+      "type": "matching",
+      "title": "City Match",
+      "icon": "🏙️",
+      "desc": "Match vehicle to helper & place",
+      "level": 2,
+      "pages": 1,
+      "new_in_v1_6": true
+    },
+    {
+      "id": "t23",
+      "type": "tracing",
+      "title": "Turtle Trail Trace",
+      "icon": "🐢",
+      "desc": "Trace path — left to right, steady",
+      "level": 1,
+      "pages": 1,
+      "new_in_v1_6": true
+    },
+    {
+      "id": "t24",
+      "type": "counting",
+      "title": "Weather Count",
+      "icon": "⛅",
+      "desc": "Count suns, clouds, raindrops",
+      "level": 2,
+      "pages": 1,
+      "new_in_v1_6": true
     }
   ],
   "meta": {
-    "total": 20,
+    "total": 24,
     "local_pdf": "jspdf",
     "fallback": "window.print",
     "qr_deeplink": "littlelearn://activity/<id>",
@@ -205,6 +245,7 @@
     "offline": true,
     "new_in_v1_3": 6,
     "new_in_v1_4": 4,
-    "new_in_v1_5": 4
+    "new_in_v1_5": 4,
+    "new_in_v1_6": 4
   }
 }

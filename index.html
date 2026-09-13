@@ -283,7 +283,7 @@
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
           <h2 id="greeting">Hi, Explorer! Ready to learn?</h2>
           <span class="pill" style="background:#FFF7ED">🎧 Tap anything — Leo will read it aloud</span>
-          <span class="pill" style="background:#ECFDF5;border-color:#A7F3D0" id="contentLivePill">⚡ 6,467 activities live • Engine running</span>
+          <span class="pill" style="background:#ECFDF5;border-color:#A7F3D0" id="contentLivePill">⚡ 7,357 activities live • Engine running</span>
         </div>
         <p>Leo guides every step. Eye breaks are part of the story — warm filter ON by default, 20-20-20 every 20 min, 30 min cap.</p>
         <div class="hero-actions">
@@ -299,7 +299,7 @@
       <div style="position:absolute;right:12px;bottom:10px;display:flex;gap:6px;z-index:1">
         <span class="pill" style="font-size:12px">Offline ✓</span>
         <span class="pill" style="font-size:12px">No login ✓</span>
-        <span class="pill" style="font-size:12px;background:#2D2A26;color:white" id="engineCountPill">6,467 live</span>
+        <span class="pill" style="font-size:12px;background:#2D2A26;color:white" id="engineCountPill">7,357 live</span>
       </div>
     </div>
 
@@ -308,7 +308,7 @@
       <div style="width:44px;height:44px;border-radius:12px;background:white;display:grid;place-items:center;font-size:20px;flex-shrink:0">🗃️</div>
       <div style="flex:1;min-width:220px">
         <b style="font-size:13px">Data is LIVE — pushing content works <span class="live-dot"></span></b>
-        <div style="color:#065F46;font-weight:700;font-size:12px;line-height:1.3">Procedural engines generate 6,467 activities on-device. Play anything → progress saves instantly → parent dashboard updates. Try “Seed Demo Week”.</div>
+        <div style="color:#065F46;font-weight:700;font-size:12px;line-height:1.3">Procedural engines generate 7,357 activities on-device. Play anything → progress saves instantly → parent dashboard updates. Try “Seed Demo Week”.</div>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <button class="btn btn-teal btn-sm" onclick="seedDemoWeek()">Seed data</button>
@@ -325,14 +325,14 @@
     <div class="section-head"><div><h3>✨ Choose Your Next Adventure</h3><p>Child picks from 2–3 options — autonomy + focus</p></div><button class="pill" onclick="shuffleChoices()">Shuffle ↻</button></div>
     <div id="choiceRow" class="choice-row"></div>
 
-    <div class="section-head"><div><h3>🧩 All Learning Worlds</h3><p id="moduleCount">22 worlds • 6,467 activities via variation engine • Tap to play</p></div><div class="filter-chips" id="filterChips"></div></div>
+    <div class="section-head"><div><h3>🧩 All Learning Worlds</h3><p id="moduleCount">24 worlds • 7,357 activities via variation engine • Tap to play</p></div><div class="filter-chips" id="filterChips"></div></div>
     <div id="moduleGrid" class="grid"></div>
 
     <!-- Live engine stats -->
     <div class="card" style="margin-top:14px">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
         <h4 style="margin:0">⚙️ Content Engine — Live</h4>
-        <span class="pill" id="engineStatus">All generators healthy • 6,467 instances</span>
+        <span class="pill" id="engineStatus">All generators healthy • 7,357 instances</span>
       </div>
       <div id="engineStats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:12px"></div>
       <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
@@ -359,10 +359,10 @@
       </div>
     </div>
 
-    <!-- Production: Story Library (16 real books) v1.4 -->
+    <!-- Production: Story Library (24 real books) v1.6 -->
     <div class="card" style="margin-top:12px">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-        <h4 style="margin:0">📚 Story Library — 20 read-along books (offline, Khan parity) <span style="background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;padding:2px 8px;border-radius:999px;font-size:11px">+4 new in v1.5</span></h4>
+        <h4 style="margin:0">📚 Story Library — 24 read-along books (offline, Khan parity) <span style="background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;padding:2px 8px;border-radius:999px;font-size:11px">+4 new in v1.6</span></h4>
         <button class="btn btn-ghost btn-sm" onclick="openBookLibrary()">Open Library →</button>
       </div>
       <div class="book-grid" id="bookPreview"></div>
@@ -372,8 +372,8 @@
     <div class="card" style="margin-top:12px;background:linear-gradient(135deg,#FFFBEB,#ECFDF5);border-color:#FDBA74">
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
         <div style="width:44px;height:44px;border-radius:12px;background:white;display:grid;place-items:center;font-size:22px;box-shadow:var(--shadow)">🗓️</div>
-        <div style="flex:1;min-width:200px"><h4 style="margin:0">Daily Challenges — 10 new • Offline • Ocean & Space</h4><div style="color:var(--muted);font-weight:700;font-size:12px">One 3-min mission per day. Today: Find 3 circles, roar like a lion, say a kind word. No scores — just leaves.</div></div>
-        <span class="pill" style="background:#ECFDF5;border-color:#A7F3D0">v1.5 • 22 worlds</span>
+        <div style="flex:1;min-width:200px"><h4 style="margin:0">Daily Challenges — 14 new • Offline • Ocean & Space</h4><div style="color:var(--muted);font-weight:700;font-size:12px">One 3-min mission per day. Today: Find 3 circles, roar like a lion, say a kind word. No scores — just leaves.</div></div>
+        <span class="pill" style="background:#ECFDF5;border-color:#A7F3D0">v1.6 • 24 worlds</span>
       </div>
       <div id="dailyChallengePreview" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px"></div>
       <div id="achievementPreview" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"></div>
@@ -472,7 +472,7 @@
           <button class="data-tab" onclick="showDataTab('sessions',this)">session_log (0)</button>
           <button class="data-tab" onclick="showDataTab('rewards',this)">reward_state</button>
           <button class="data-tab" onclick="showDataTab('settings',this)">settings</button>
-          <button class="data-tab" onclick="showDataTab('content',this)">content_pack (6,467)</button>
+          <button class="data-tab" onclick="showDataTab('content',this)">content_pack (7,357)</button>
         </div>
         <div id="dataJson" class="json-box" style="margin-top:8px;max-height:240px">Loading…</div>
         <div id="dataStatus" style="color:var(--muted);font-weight:700;font-size:11px;margin-top:6px"></div>
@@ -622,7 +622,7 @@
 <!-- Book Library -->
 <div id="bookModal" class="modal" role="dialog" aria-modal="true">
   <div class="modal-card" style="max-width:720px">
-    <div class="modal-head"><h4>📚 Story Library — 20 books</h4><button class="icon-btn" onclick="closeBookLibrary()">✕</button></div>
+    <div class="modal-head"><h4>📚 Story Library — 24 books</h4><button class="icon-btn" onclick="closeBookLibrary()">✕</button></div>
     <div class="modal-body">
       <div class="book-grid" id="bookGrid"></div>
       <div id="bookReader" style="display:none;margin-top:12px;background:#FFFBEB;border:1.5px solid var(--border);border-radius:16px;padding:14px"></div>
@@ -714,6 +714,8 @@ const baseModules=[
   {id:'sequence',name:'Sequence Builder',emoji:'🔗',color:'#60A5FA',cat:'cognitive',desc:'Ordering & story',engine:'sequence'},
   {id:'ocean_friends',name:'Ocean Friends',emoji:'🐠',color:'#06B6D4',cat:'nature',desc:'Sea creatures & sounds',engine:'creature_sound'},
   {id:'space_quest',name:'Space Quest',emoji:'🚀',color:'#7C3AED',cat:'cognitive',desc:'Planets & sorting',engine:'shape'},
+  {id:'farm_friends',name:'Farm Friends',emoji:'🚜',color:'#84CC16',cat:'nature',desc:'Farm animals & chores',engine:'creature_sound'},
+  {id:'city_builders',name:'City Builders',emoji:'🏙️',color:'#F59E0B',cat:'cognitive',desc:'City & construction sorting',engine:'shape'},
 ];
 // dynamic modules pushed at runtime
 let extraModules=JSON.parse(localStorage.getItem(CONTENT_KEY)||'[]');
@@ -721,11 +723,11 @@ function allModules(){return [...baseModules, ...extraModules];}
 let modules=allModules();
 const catLabel={literacy:'Literacy',numeracy:'Numeracy',nature:'Nature',cognitive:'Cognitive',life:'Life Skills',creative:'Creative'};
 
-// engine instance counts v1.5 — 6,467 live (22 worlds, see data/content-manifest.json)
+// engine instance counts v1.6 — 7,357 live (24 worlds, see data/content-manifest.json)
 const engineCounts={
-  abc_land:470, count_play:607, animal_kingdom:290, bird_buddies:290, color_splash:210, write_me:350, story_time:360, rhyme_time:270,
-  body_senses:190, weather:190, emotions:195, helpers:195, music:200, opposites:205, shape_detective:450, puzzle_path:305, math_magic:370, memory_match:270, odd_one:305, sequence:315,
-  ocean_friends:220, space_quest:210
+  abc_land:490, count_play:627, animal_kingdom:310, bird_buddies:310, color_splash:230, write_me:370, story_time:400, rhyme_time:290,
+  body_senses:210, weather:210, emotions:215, helpers:215, music:220, opposites:225, shape_detective:470, puzzle_path:325, math_magic:390, memory_match:290, odd_one:325, sequence:335,
+  ocean_friends:240, space_quest:230, farm_friends:220, city_builders:210
 };
 function totalInstances(){
   let total=0;
@@ -1381,6 +1383,10 @@ const printableTemplates=[
   {id:'t18',type:'matching',title:'Emotion Puppets',icon:'🎭',desc:'Cut & play feeling puppets'},
   {id:'t19',type:'coloring',title:'Weather Wheel',icon:'🌤️',desc:'Color wheel + dress for weather'},
   {id:'t20',type:'tracing',title:'Music Notes Trace',icon:'🎵',desc:'Trace notes & clap rhythm'},
+  {id:'t21',type:'coloring',title:'Farm Coloring',icon:'🚜',desc:'Farm scene • crayons & counting'},
+  {id:'t22',type:'matching',title:'City Match',icon:'🏙️',desc:'Match vehicle to helper & place'},
+  {id:'t23',type:'tracing',title:'Turtle Trail Trace',icon:'🐢',desc:'Trace path — steady'},
+  {id:'t24',type:'counting',title:'Weather Count',icon:'⛅',desc:'Count suns, clouds, raindrops'},
 ];
 let printFilter='all';
 function renderPrintables(){
@@ -1494,7 +1500,7 @@ function startPathNext(){
 }
 function jumpToLevel(l){ const p=activeProfile(); if(p) p.lp_level=l; localStorage.setItem('lp_level',String(l)); renderLearningPath(); showToast('Jumped to Level '+l); }
 
-// Books — 20 real read-along books (v1.5: +4 new, parity: Khan 100+ books)
+// Books — 24 real read-along books (v1.6: +4 new, parity: Khan 100+ books)
 const books=[
   { id:'b1', title:'Leo’s Star', emoji:'⭐', pages:['Leo the lion found a shiny star in the grass.','He showed it to his friends: a bird, a monkey, and a turtle.','“Let’s share it!” said Leo. They made a night lamp together.','Moral: Sharing makes light brighter.'], level:2 },
   { id:'b2', title:'Rain Day', emoji:'🌧️', pages:['Maya looked out — grey clouds!','She wore her yellow raincoat and red boots.','Splash! Puddle jump! Plop — she laughed.','After rain, a rainbow! 🌈'], level:1 },
@@ -1516,6 +1522,10 @@ const books=[
   { id:'b18', title:'Counting Stars', emoji:'⭐', pages:['1 star, 2 stars, 3 stars shine.','Count 10 stars in the night sky.','Leo counts too — one by one.','Can you find the North Star? ✨'], level:2 },
   { id:'b19', title:'Friendship Garden', emoji:'🌻', pages:['Aya planted seeds with Sam.','They watered every sunny day.','Flowers bloomed — yellow and red!','Sharing makes gardens grow. 🌼'], level:2 },
   { id:'b20', title:'Bedtime Routine', emoji:'🌙', pages:['Brush teeth — scrub, scrub!','Read a short story with Mama.','Breathe slow — eyes close.','Good night, stars. Sleep tight! 😴'], level:1 },
+  { id:'b21', title:'Farm Morning', emoji:'🚜', pages:['Rooster crows — cock-a-doodle-doo!','Farmer feeds cows and hens.','Tractor puffs, fields are green.','Farm friends work together. 🌽'], level:2 },
+  { id:'b22', title:'City Helpers', emoji:'🏙️', pages:['Bus driver rings — ding ding!','Builder lifts beams high.','Mail carrier brings letters.','City buzzes — everyone helps!'], level:3 },
+  { id:'b23', title:'The Brave Little Turtle', emoji:'🐢', pages:['Tula turtle was slow but steady.','Friends raced ahead — she kept going.','At the hill, she helped a beetle.','Slow and kind wins the day. 💚'], level:3 },
+  { id:'b24', title:'Weather Wonders', emoji:'🌈', pages:['Sunny, rainy, cloudy, snowy!','Dress up — boots or hat?','Seasons turn — spring to winter.','What’s the weather today? ⛅'], level:2 },
 ];
 function renderBooks(){
   const preview=document.getElementById('bookPreview');
@@ -1570,6 +1580,10 @@ const dailyChallenges=[
   {day:8,title:"Space Sort",emoji:"🚀",mod:"space_quest",prompt:"Sort toys big → small"},
   {day:9,title:"Five Senses",emoji:"👃",mod:"body_senses",prompt:"Smell, hear, see, touch, taste"},
   {day:10,title:"Rhyme Time",emoji:"🎵",mod:"rhyme_time",prompt:"Find 2 rhymes for cat"},
+  {day:11,title:"Farm Sounds",emoji:"🚜",mod:"farm_friends",prompt:"Moo, baa — guess the farm friend!"},
+  {day:12,title:"City Trip",emoji:"🏙️",mod:"city_builders",prompt:"Name 3 city helpers"},
+  {day:13,title:"Brave Steps",emoji:"🐢",mod:"sequence",prompt:"Do one thing slowly and kindly"},
+  {day:14,title:"Weather Watch",emoji:"⛅",mod:"weather",prompt:"Draw today’s weather"},
 ];
 const achievementsList=[
   {id:"first_steps",emoji:"🌟",title:"First Steps"},
@@ -1580,6 +1594,12 @@ const achievementsList=[
   {id:"kind",emoji:"💛",title:"Kind Heart"},
   {id:"eye",emoji:"👁️",title:"Eye-Safe Star"},
   {id:"print",emoji:"🖨️",title:"Print Friend"},
+  {id:"farm_star",emoji:"🚜",title:"Farm Star"},
+  {id:"city_builder",emoji:"🏙️",title:"City Builder"},
+  {id:"weather_watcher",emoji:"⛅",title:"Weather Watcher"},
+  {id:"turtle_trail",emoji:"🐢",title:"Steady Turtle"},
+  {id:"story_star",emoji:"⭐",title:"Story Star"},
+  {id:"pattern_pro",emoji:"🔷",title:"Pattern Pro"},
 ];
 function renderDailyChallenges(){
   const grid=document.getElementById('dailyChallengePreview');

@@ -6,39 +6,41 @@ describe('LittleLearn build & data smoke', () => {
   it('index.html exists and has correct branding + counts', () => {
     const html = fs.readFileSync(path.join(process.cwd(), 'index.html'), 'utf8')
     expect(html).toContain('LittleLearn')
-    expect(html).toContain('22 worlds')
-    expect(html).toContain('6,467')
+    expect(html).toContain('24 worlds')
+    expect(html).toContain('7,357')
     expect(html).toContain('Eye-Safe')
     // mobile bootstrapping guards must be present
     expect(html).toContain('overflow-x:hidden')
     expect(html).toContain('minmax(0,1fr)')
   })
 
-  it('content-manifest is v1.5 with 22 modules and 6467 live', () => {
+  it('content-manifest is v1.6 with 24 modules and 7357 live', () => {
     const m = JSON.parse(fs.readFileSync('data/content-manifest.json','utf8'))
-    expect(m.version).toBe('1.5.0')
-    expect(m.live_instances).toBe(6467)
-    expect(m.modules.length).toBe(22)
+    expect(m.version).toBe('1.6.0')
+    expect(m.live_instances).toBe(7357)
+    expect(m.modules.length).toBe(24)
     expect(m.modules.find(x=>x.module_id==='ocean_friends')).toBeTruthy()
     expect(m.modules.find(x=>x.module_id==='space_quest')).toBeTruthy()
+    expect(m.modules.find(x=>x.module_id==='farm_friends')).toBeTruthy()
+    expect(m.modules.find(x=>x.module_id==='city_builders')).toBeTruthy()
   })
 
-  it('books and printables are 20 each', () => {
+  it('books and printables are 24 each', () => {
     const b = JSON.parse(fs.readFileSync('data/books.json','utf8'))
     const p = JSON.parse(fs.readFileSync('data/printables.json','utf8'))
-    expect(b.books.length).toBe(20)
-    expect(p.templates.length).toBe(20)
-    expect(b.version).toBe('1.5.0')
-    expect(p.version).toBe('1.5.0')
+    expect(b.books.length).toBe(24)
+    expect(p.templates.length).toBe(24)
+    expect(b.version).toBe('1.6.0')
+    expect(p.version).toBe('1.6.0')
   })
 
   it('new packs exist and are valid JSON', () => {
     const dc = JSON.parse(fs.readFileSync('data/daily-challenges.json','utf8'))
     const ach = JSON.parse(fs.readFileSync('data/achievements.json','utf8'))
     const weekly = JSON.parse(fs.readFileSync('data/weekly-activities.json','utf8'))
-    expect(dc.challenges.length).toBe(10)
-    expect(ach.achievements.length).toBe(10)
-    expect(weekly.plan.length).toBe(5)
+    expect(dc.challenges.length).toBe(14)
+    expect(ach.achievements.length).toBe(14)
+    expect(weekly.plan.length).toBe(10)
   })
 
   it('vite build output exists (if built)', () => {

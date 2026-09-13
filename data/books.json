@@ -1,5 +1,5 @@
 {
-  "version": "1.5.0",
+  "version": "1.6.0",
   "books": [
     {
       "id": "b1",
@@ -280,16 +280,73 @@
       ],
       "words": 25,
       "new_in_v1_5": true
+    },
+    {
+      "id": "b21",
+      "title": "Farm Morning",
+      "emoji": "🚜",
+      "level": 2,
+      "pages": [
+        "Rooster crows — cock-a-doodle-doo!",
+        "Farmer feeds cows and hens.",
+        "Tractor puffs, fields are green.",
+        "Farm friends work together. 🌽"
+      ],
+      "words": 28,
+      "new_in_v1_6": true
+    },
+    {
+      "id": "b22",
+      "title": "City Helpers",
+      "emoji": "🏙️",
+      "level": 3,
+      "pages": [
+        "Bus driver rings — ding ding!",
+        "Builder lifts beams high.",
+        "Mail carrier brings letters.",
+        "City buzzes — everyone helps!"
+      ],
+      "words": 27,
+      "new_in_v1_6": true
+    },
+    {
+      "id": "b23",
+      "title": "The Brave Little Turtle",
+      "emoji": "🐢",
+      "level": 3,
+      "pages": [
+        "Tula turtle was slow but steady.",
+        "Friends raced ahead — she kept going.",
+        "At the hill, she helped a beetle.",
+        "Slow and kind wins the day. 💚"
+      ],
+      "words": 29,
+      "new_in_v1_6": true
+    },
+    {
+      "id": "b24",
+      "title": "Weather Wonders",
+      "emoji": "🌈",
+      "level": 2,
+      "pages": [
+        "Sunny, rainy, cloudy, snowy!",
+        "Dress up — boots or hat?",
+        "Seasons turn — spring to winter.",
+        "What’s the weather today? ⛅"
+      ],
+      "words": 26,
+      "new_in_v1_6": true
     }
   ],
   "meta": {
-    "total": 20,
+    "total": 24,
     "read_along": true,
     "offline": true,
     "avg_words_per_book": 26,
     "illstration_style": "flat, warm, high-contrast, blue-light-safe",
     "new_in_v1_3": 4,
     "new_in_v1_4": 4,
-    "new_in_v1_5": 4
+    "new_in_v1_5": 4,
+    "new_in_v1_6": 4
   }
 }

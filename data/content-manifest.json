@@ -1,9 +1,9 @@
 {
-  "version": "1.5.0",
+  "version": "1.6.0",
   "generated_at": "2026-09-13",
-  "target_instances": 6200,
-  "live_instances": 6467,
-  "note": "v1.5 adds 795 variants over v1.4 (total 6467) + 4 books (20 total) + 4 printables (20) + 2 permanent worlds (22 total: Ocean Friends, Space Quest) + daily-challenges + achievements + weekly plan — still 100% offline, deterministic hash",
+  "target_instances": 7000,
+  "live_instances": 7357,
+  "note": "v1.6 adds 890 variants over v1.5 (total 7357) + 4 books (24 total) + 4 printables (24) + 2 worlds (24 total: Farm Friends, City Builders) + 14 daily challenges + 14 achievements + 10-day weekly plan — still 100% offline",
   "modules": [
     {
       "module_id": "abc_land",
@@ -64,7 +64,7 @@
           ]
         },
         "instance_formula": "26 letters × 4 tracing × 4 interaction × age variants",
-        "approx_instances": 470,
+        "approx_instances": 490,
         "new_in_v1_3": [
           "rainbow-trace",
           "find_in_word"
@@ -130,7 +130,7 @@
           ]
         },
         "instance_formula": "12 objects × ~15 counts × 5 layouts × 4 interactions",
-        "approx_instances": 607,
+        "approx_instances": 627,
         "new_in_v1_3": [
           "button,balloon objects",
           "ten-frame layout",
@@ -191,7 +191,7 @@
             "sort_big_small"
           ]
         },
-        "approx_instances": 290
+        "approx_instances": 310
       }
     },
     {
@@ -237,7 +237,7 @@
             "feather_color"
           ]
         },
-        "approx_instances": 290
+        "approx_instances": 310
       }
     },
     {
@@ -281,7 +281,7 @@
             "match_color"
           ]
         },
-        "approx_instances": 210
+        "approx_instances": 230
       }
     },
     {
@@ -311,7 +311,7 @@
             "double"
           ]
         },
-        "approx_instances": 350
+        "approx_instances": 370
       }
     },
     {
@@ -329,7 +329,7 @@
       "asset_bundle": "assets/story_time/",
       "generator_spec": {
         "parameters": {
-          "books": 20,
+          "books": 24,
           "pages_per_book": [
             3,
             5
@@ -338,7 +338,7 @@
           "comprehension_q": true,
           "new_in_v1_4": 4
         },
-        "approx_instances": 360
+        "approx_instances": 400
       }
     },
     {
@@ -372,7 +372,7 @@
             "sing_along"
           ]
         },
-        "approx_instances": 270
+        "approx_instances": 290
       }
     },
     {
@@ -412,7 +412,7 @@
             "exercise"
           ]
         },
-        "approx_instances": 190
+        "approx_instances": 210
       }
     },
     {
@@ -451,7 +451,7 @@
             "shorts"
           ]
         },
-        "approx_instances": 190
+        "approx_instances": 210
       }
     },
     {
@@ -492,7 +492,7 @@
             "draw"
           ]
         },
-        "approx_instances": 195
+        "approx_instances": 215
       }
     },
     {
@@ -537,7 +537,7 @@
             "farm"
           ]
         },
-        "approx_instances": 195
+        "approx_instances": 215
       }
     },
     {
@@ -574,7 +574,7 @@
             "abc_song"
           ]
         },
-        "approx_instances": 200
+        "approx_instances": 220
       }
     },
     {
@@ -608,7 +608,7 @@
             "giraffe/turtle"
           ]
         },
-        "approx_instances": 205
+        "approx_instances": 225
       }
     },
     {
@@ -652,7 +652,7 @@
             "by_sides"
           ]
         },
-        "approx_instances": 450
+        "approx_instances": 470
       }
     },
     {
@@ -689,7 +689,7 @@
             "free_drag"
           ]
         },
-        "approx_instances": 305
+        "approx_instances": 325
       }
     },
     {
@@ -721,7 +721,7 @@
             "number_line"
           ]
         },
-        "approx_instances": 370
+        "approx_instances": 390
       }
     },
     {
@@ -755,7 +755,7 @@
             16
           ]
         },
-        "approx_instances": 270
+        "approx_instances": 290
       }
     },
     {
@@ -788,7 +788,7 @@
             "different_color"
           ]
         },
-        "approx_instances": 305
+        "approx_instances": 325
       }
     },
     {
@@ -820,7 +820,7 @@
             5
           ]
         },
-        "approx_instances": 315
+        "approx_instances": 335
       }
     },
     {
@@ -866,7 +866,7 @@
             "find_hidden"
           ]
         },
-        "approx_instances": 220,
+        "approx_instances": 240,
         "new_in_v1_5": true
       }
     },
@@ -904,35 +904,121 @@
             "by_shape"
           ]
         },
-        "approx_instances": 210,
+        "approx_instances": 230,
         "new_in_v1_5": true
+      }
+    },
+    {
+      "module_id": "farm_friends",
+      "display_name": "Farm Friends",
+      "category": "nature",
+      "emoji": "🚜",
+      "color": "#84CC16",
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
+      "activity_generator": "creature_sound_v1",
+      "asset_bundle": "assets/farm_friends/",
+      "generator_spec": {
+        "parameters": {
+          "creature_pool": [
+            "cow",
+            "pig",
+            "chicken",
+            "horse",
+            "sheep",
+            "duck",
+            "goat",
+            "donkey"
+          ],
+          "sound_variants": [
+            "moo",
+            "oink",
+            "cluck",
+            "neigh",
+            "baa"
+          ],
+          "habitat_scenes": [
+            "barn",
+            "field",
+            "pond"
+          ],
+          "quiz_variants": [
+            "match_sound",
+            "match_baby",
+            "sort_big_small"
+          ]
+        },
+        "approx_instances": 220,
+        "new_in_v1_6": true
+      }
+    },
+    {
+      "module_id": "city_builders",
+      "display_name": "City Builders",
+      "category": "cognitive",
+      "emoji": "🏙️",
+      "color": "#F59E0B",
+      "age_tiers_supported": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ],
+      "activity_generator": "shape_engine_v1",
+      "asset_bundle": "assets/city_builders/",
+      "generator_spec": {
+        "parameters": {
+          "shape_pool": [
+            "bus",
+            "house",
+            "bridge",
+            "tower",
+            "car"
+          ],
+          "hidden_in_scenes": [
+            "city",
+            "construction",
+            "street",
+            "harbor"
+          ],
+          "sorting_rules": [
+            "by_size",
+            "by_color",
+            "by_use"
+          ]
+        },
+        "approx_instances": 210,
+        "new_in_v1_6": true
       }
     }
   ],
   "content_volume_plan": {
-    "literacy": 1380,
-    "numeracy": 1320,
-    "nature": 780,
-    "cognitive": 1820,
-    "life_skills": 760,
-    "creative": 440,
-    "total": 6500,
-    "live": 6467,
-    "note": "live = deterministic filtered; total = theoretical max before dedup (v1.5)"
+    "literacy": 1520,
+    "numeracy": 1440,
+    "nature": 1020,
+    "cognitive": 2060,
+    "life_skills": 880,
+    "creative": 480,
+    "total": 7800,
+    "live": 7357,
+    "note": "live = deterministic filtered; total = theoretical max before dedup (v1.6)"
   },
   "changelog": {
     "1.0.0": "5 modules prototype",
     "1.2.0": "20 modules engineCounts sum 4250",
     "1.3.0": "20 modules expanded → 5247 live (+997 procedural), 12 books, 12 printables, expanded tracing/coloring/music/shape pools",
     "1.4.0": "5672 live (+425), 16 books (+4), 16 printables (+4), parent-tips.json plain language, mobile cropping fix (420px frame + flex-wrap + minmax), Live Data Layer → plain Today Summary",
-    "1.5.0": "6467 live (+795), 20 books (+4), 20 printables (+4), 2 new worlds (22 total), 26 seed samples, 10 daily challenges, 10 achievements, weekly plan — offline-first"
+    "1.5.0": "6467 live (+795), 20 books (+4), 20 printables (+4), 2 new worlds (22 total), 26 seed samples, 10 daily challenges, 10 achievements, weekly plan — offline-first",
+    "1.6.0": "7357 live (+890), 24 books (+4), 24 printables (+4), 2 new worlds (24 total), 32 seed samples, 14 daily challenges, 14 achievements, 10-day weekly plan — offline-first"
   },
   "additional_packs": {
-    "books": "data/books.json v1.5 (20)",
-    "printables": "data/printables.json v1.5 (20)",
-    "daily_challenges": "data/daily-challenges.json v1.5 (10)",
-    "achievements": "data/achievements.json v1.5 (10)",
-    "weekly_plan": "data/weekly-activities.json v1.5 (5 days)",
+    "books": "data/books.json v1.6 (24)",
+    "printables": "data/printables.json v1.6 (24)",
+    "daily_challenges": "data/daily-challenges.json v1.6 (14)",
+    "achievements": "data/achievements.json v1.6 (14)",
+    "weekly_plan": "data/weekly-activities.json v1.6 (10 days)",
     "parent_tips": "data/parent-tips.json v1.4 (plain language)"
   }
 }
