@@ -1,0 +1,47 @@
+{
+  "version": "1.4.0",
+  "note": "Non-technical, plain-language tips for parents — no jargon, no JSON. Shown in Parent Dashboard.",
+  "today_tips": [
+    {
+      "id": "tip_talk",
+      "icon": "🗣️",
+      "title": "Talk",
+      "for_age": "3-6",
+      "time": "2 min at dinner",
+      "prompt": "“What animal sound made you laugh today?” Let them roar, then guess.",
+      "why": "Builds listening and vocabulary — no screen needed."
+    },
+    {
+      "id": "tip_do",
+      "icon": "✋",
+      "title": "Do",
+      "for_age": "4-5",
+      "time": "3 min with blocks",
+      "prompt": "Build a tower with 5 blocks, add 2 — “How many now?” Count together.",
+      "why": "Practises adding within 10 with real things."
+    },
+    {
+      "id": "tip_winddown",
+      "icon": "🌙",
+      "title": "Wind-down",
+      "for_age": "all",
+      "time": "20 seconds",
+      "prompt": "Look at something far away (a tree, a door). Breathe in, breathe out together.",
+      "why": "Gentle eye rest — replaces the 20-20-20 story in class."
+    }
+  ],
+  "weekly_ideas": [
+    { "day": "Monday", "idea": "Sort socks by color — “Which two match?”", "skill": "Sorting & matching" },
+    { "day": "Tuesday", "idea": "Draw your family with 3 shapes", "skill": "Shapes & creativity" },
+    { "day": "Wednesday", "idea": "Name 3 feelings today: happy, calm, excited?", "skill": "Emotions" },
+    { "day": "Thursday", "idea": "Read one story aloud, ask: “What would you do?”", "skill": "Story & empathy" },
+    { "day": "Friday", "idea": "Weather check: “Sunny — what do we wear?”", "skill": "Weather & life skills" },
+    { "day": "Weekend", "idea": "Print one worksheet — trace, count, or color together", "skill": "Offline practice" }
+  ],
+  "eye_care_plain": [
+    "Warm filter stays ON — soft yellow, not harsh white.",
+    "Every 20 minutes Leo says ‘look far’ — it’s a story, not a lock.",
+    "Daily time ends gently — offers printable play, not a countdown.",
+    "Best after screen: warm paper, crayons, daylight, and hugs."
+  ]
+}

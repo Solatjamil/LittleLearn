@@ -2,15 +2,42 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>LittleLearn — Kindergarten Learning, Eye-Safe by Default</title>
+<link rel="canonical" href="https://littlelearn.app/">
 <meta name="theme-color" content="#FF8A65">
-<meta name="description" content="Offline-first kindergarten learning app for ages 3-6 with eye protection built into the learning loop.">
-<link rel="manifest" href="manifest.json">
-<link rel="icon" href="/icons/icon-192.svg">
+<meta name="description" content="Offline-first kindergarten learning for ages 3-6 — 7357 activities across 24 worlds, eye protection by default (warm filter, 20-20-20 story breaks, 30-min cap), printables on-device. No ads, no login, COPPA-safe.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="LittleLearn">
+<meta name="keywords" content="kindergarten, offline learning, PWA, eye-safe, kids education, early learning, printables, farm friends, city builders">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LittleLearn">
+<meta property="og:title" content="LittleLearn — Kindergarten Learning, Eye-Safe by Default">
+<meta property="og:description" content="Offline-first kindergarten learning for ages 3-6 — 7357 activities, 24 worlds, eye protection built in. Warm filter ON, 20-20-20 story breaks, printables on-device.">
+<meta property="og:url" content="https://littlelearn.app/">
+<meta property="og:image" content="https://littlelearn.app/icons/icon-512.svg">
+<meta property="og:image:alt" content="LittleLearn lion mascot">
+<meta property="og:locale" content="en_PK">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LittleLearn — Kindergarten Learning, Eye-Safe by Default">
+<meta name="twitter:description" content="Offline-first kindergarten learning for ages 3-6 — 7357 activities across 24 worlds, eye protection by default.">
+<meta name="twitter:image" content="https://littlelearn.app/icons/icon-512.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="LittleLearn">
+<meta name="format-detection" content="telephone=no">
+<meta name="color-scheme" content="light">
+<link rel="icon" type="image/svg+xml" href="/icons/icon-192.svg">
 <link rel="apple-touch-icon" href="/icons/icon-192.svg">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"LittleLearn","alternateName":"LittleLearn — Kindergarten Learning","description":"Offline-first kindergarten learning for ages 3-6 — 7357 activities, 24 worlds, eye protection by default, printables on-device.","inLanguage":"en","educationalLevel":"Kindergarten","audience":{"@type":"Audience","audienceType":"Children 3-6"},"isAccessibleForFree":true,"learningResourceType":"Interactive Activity","publisher":{"@type":"Organization","name":"LittleLearn","logo":{"@type":"ImageObject","url":"https://littlelearn.app/icons/icon-512.svg"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"LittleLearn","url":"https://littlelearn.app/","potentialAction":{"@type":"SearchAction","target":"https://littlelearn.app/#learn?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap');
   :root{
     --bg:#FFF7ED;
     --card:#FFFFFF;
@@ -32,7 +59,10 @@
     --radius-lg:28px;
     --nav-h:78px;
   }
-  *{box-sizing:border-box}
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;background:#2D2A26;color:white;padding:10px 14px;border-radius:10px;z-index:1000;font-weight:800}
+  .skip-link:focus{left:12px;top:12px;width:auto;height:auto}
+  #main-content{scroll-margin-top:12px}
+*{box-sizing:border-box}
   html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:'Nunito','Baloo 2',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
   button{font:inherit}
   a{color:inherit;text-decoration:none}
@@ -246,6 +276,9 @@
 </style>
 </head>
 <body class="eye-protection web-mode">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div id="offlineBanner" role="status" aria-live="polite" style="display:none;position:sticky;top:0;z-index:99;background:#FEF3C7;color:#92400E;text-align:center;padding:8px 12px;font-weight:800;font-size:13px;border-bottom:1.5px solid #FDBA74">📴 Offline — you’re still learning! All 7,357 activities work offline.</div>
+<noscript><div style="background:#FEF3C7;color:#92400E;text-align:center;padding:12px;font-weight:800">LittleLearn needs JavaScript to play — it’s still offline-first and eye-safe once loaded. Please enable JavaScript.</div></noscript>
 <div id="eyeWarmOverlay"></div>
 <header class="topbar">
   <div class="topbar-inner">
@@ -274,7 +307,7 @@
   </div>
 </header>
 
-<main class="app-shell">
+<main id="main-content" class="app-shell" tabindex="-1">
 
   <section id="screen-home" class="screen active">
     <div class="hero">
@@ -563,7 +596,7 @@
   </section>
 </main>
 
-<nav class="bottom-nav" aria-label="Primary">
+<nav class="bottom-nav" aria-label="Primary — Home, Learn, Play, Rewards, Parents">
   <button class="nav-item active" data-screen="home" onclick="switchScreen('home')"><span class="ni">🏠</span><small>Home</small></button>
   <button class="nav-item" data-screen="learn" onclick="switchScreen('learn')"><span class="ni">📚</span><small>Learn</small></button>
   <button class="nav-item" data-screen="play" onclick="switchScreen('play')"><span class="ni">🎮</span><small>Play</small></button>
@@ -1704,7 +1737,27 @@ function renderWeeklyChart(){
   });
 }
 
-if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').then(reg=>{
+    // check for updates
+    reg.addEventListener('updatefound',()=>{
+      const w=reg.installing; if(w) w.addEventListener('statechange',()=>{
+        if(w.state==='installed' && navigator.serviceWorker.controller) showToast('✨ New version ready — reload to update');
+      });
+    });
+  }).catch(()=>{/* offline fallback uses inline sw */});
+  // handle controller change
+  let refreshing=false; navigator.serviceWorker.addEventListener('controllerchange',()=>{ if(!refreshing){refreshing=true; window.location.reload();} });
+  });
+}
+// offline banner + online status
+function updateOfflineBanner(){ const b=document.getElementById('offlineBanner'); if(!b) return; b.style.display= navigator.onLine ? 'none' : 'block'; }
+window.addEventListener('online',()=>{updateOfflineBanner(); showToast('✅ Back online — sync ready (local-first)'); });
+window.addEventListener('offline',()=>{updateOfflineBanner(); showToast('📴 Offline — all learning still works'); });
+updateOfflineBanner();
+// global error handling — production-safe toast
+window.addEventListener('error',e=>{ console.warn('App error',e.message); showToast('⚠️ Something didn’t load — try again'); });
+window.addEventListener('unhandledrejection',e=>{ console.warn('Unhandled',e.reason); showToast('⚠️ Action didn’t finish — retry'); e.preventDefault(); });
 /* Init — production */
 renderModules(); renderParent(); renderEngineStats(); renderLearningPath(); renderBooks(); renderDailyChallenges(); updateGreeting(); applyEyeProtection(); updateTimeUI(); restartEyeTimer(); startCapTicker(); refreshDataInspector(); renderWeeklyChart(); checkOnboard();
 try{const last=localStorage.getItem('littlelearn_last_day'); const today=new Date().toDateString(); if(last!==today){if(last){secondsToday=0; state.todaySeconds=0; saveState();} localStorage.setItem('littlelearn_last_day',today);}}catch{}

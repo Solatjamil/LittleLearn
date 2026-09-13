@@ -1,0 +1,352 @@
+{
+  "version": "1.6.0",
+  "books": [
+    {
+      "id": "b1",
+      "title": "Leo’s Star",
+      "emoji": "⭐",
+      "level": 2,
+      "pages": [
+        "Leo the lion found a shiny star in the grass.",
+        "He showed it to his friends: a bird, a monkey, and a turtle.",
+        "“Let’s share it!” said Leo. They made a night lamp together.",
+        "Moral: Sharing makes light brighter."
+      ],
+      "words": 32,
+      "comprehension": {
+        "q": "Who did Leo share with?",
+        "opts": [
+          "Friends",
+          "Nobody"
+        ],
+        "a": "Friends"
+      }
+    },
+    {
+      "id": "b2",
+      "title": "Rain Day",
+      "emoji": "🌧️",
+      "level": 1,
+      "pages": [
+        "Maya looked out — grey clouds!",
+        "She wore her yellow raincoat and red boots.",
+        "Splash! Puddle jump! Plop — she laughed.",
+        "After rain, a rainbow! 🌈"
+      ],
+      "words": 24
+    },
+    {
+      "id": "b3",
+      "title": "Counting Apples",
+      "emoji": "🍎",
+      "level": 2,
+      "pages": [
+        "1 apple, 2 apples, 3 apples on the tree.",
+        "Count with me: 4, 5, 6 — pick the red ones.",
+        "We have 6 apples. Let’s share 3 each.",
+        "Can you count 6 fingers?"
+      ],
+      "words": 28
+    },
+    {
+      "id": "b4",
+      "title": "Feelings Fair",
+      "emoji": "😊",
+      "level": 3,
+      "pages": [
+        "Sam felt sad. His tower fell.",
+        "A friend hugged him: “It’s okay to feel sad.”",
+        "They built again together — now Sam feels proud.",
+        "Feelings come and go, like clouds."
+      ],
+      "words": 30
+    },
+    {
+      "id": "b5",
+      "title": "Shape Town",
+      "emoji": "🔷",
+      "level": 3,
+      "pages": [
+        "Circle rolls, square stacks, triangle points.",
+        "Find shapes in town: window (square), wheel (circle).",
+        "Draw your town with 3 shapes.",
+        "What shape is the roof? 🔺"
+      ],
+      "words": 26
+    },
+    {
+      "id": "b6",
+      "title": "Ocean Friends",
+      "emoji": "🐠",
+      "level": 4,
+      "pages": [
+        "Dolphin clicks, whale sings — can you hear?",
+        "Coral hides clownfish — peekaboo!",
+        "Octopus waves 8 arms — hello!",
+        "Keep the ocean clean: no plastic. ♻️"
+      ],
+      "words": 24
+    },
+    {
+      "id": "b7",
+      "title": "Helper Day",
+      "emoji": "👩‍⚕️",
+      "level": 2,
+      "pages": [
+        "Doctor checks ears, firefighter lifts ladder, teacher reads.",
+        "Helpers wear uniforms and smiles.",
+        "Who helps you? Draw them.",
+        "Thank a helper today!"
+      ],
+      "words": 22
+    },
+    {
+      "id": "b8",
+      "title": "Space Hop",
+      "emoji": "🚀",
+      "level": 5,
+      "pages": [
+        "Rocket 5-4-3-2-1 — blast off!",
+        "Moon is dusty, Mars is red.",
+        "Astronaut floats: “Hello Earth!”",
+        "Stars twinkle — count 10!"
+      ],
+      "words": 20
+    },
+    {
+      "id": "b9",
+      "title": "Garden Helpers",
+      "emoji": "🌱",
+      "level": 2,
+      "pages": [
+        "Mia waters seeds. Sun warms soil.",
+        "Sprout peeks: hello! 🌱",
+        "Bees buzz, ladybugs spot — garden friends.",
+        "We pick tomatoes — red, ripe, yummy!"
+      ],
+      "words": 26,
+      "new_in_v1_3": true
+    },
+    {
+      "id": "b10",
+      "title": "My Family",
+      "emoji": "👨‍👩‍👧‍👦",
+      "level": 1,
+      "pages": [
+        "This is my family: Mama, Baba, and me.",
+        "We eat together, read together, laugh together.",
+        "Family hug! Biggest hug ever.",
+        "Who is in your family? Draw them."
+      ],
+      "words": 28,
+      "new_in_v1_3": true
+    },
+    {
+      "id": "b11",
+      "title": "Numbers in the Wild",
+      "emoji": "🦓",
+      "level": 3,
+      "pages": [
+        "2 giraffes stretch necks.",
+        "5 zebras trot — stripes flash!",
+        "10 birds fly V — count them.",
+        "Nature loves numbers."
+      ],
+      "words": 20,
+      "new_in_v1_3": true
+    },
+    {
+      "id": "b12",
+      "title": "The Kind Dragon",
+      "emoji": "🐉",
+      "level": 4,
+      "pages": [
+        "Dara the dragon breathed warm, not hot.",
+        "She warmed cold bunnies in winter.",
+        "Friends said: “Kind is strong.”",
+        "Be kind like Dara — share warmth."
+      ],
+      "words": 26,
+      "new_in_v1_3": true
+    },
+    {
+      "id": "b13",
+      "title": "The Sleepy Bear",
+      "emoji": "🐻",
+      "level": 2,
+      "pages": [
+        "Benny Bear yawned — winter is coming.",
+        "He gathered leaves for a cozy bed.",
+        "Friends tucked him in: “Sleep well, Benny!”",
+        "In spring, he woke — hello, sun! 🌞"
+      ],
+      "words": 27,
+      "new_in_v1_4": true
+    },
+    {
+      "id": "b14",
+      "title": "Colors Everywhere",
+      "emoji": "🎨",
+      "level": 1,
+      "pages": [
+        "Look! Red apple, blue sky, yellow sun.",
+        "Green leaf, purple flower, orange cat.",
+        "What color is your shirt today?",
+        "Let’s paint a rainbow together! 🌈"
+      ],
+      "words": 26,
+      "new_in_v1_4": true
+    },
+    {
+      "id": "b15",
+      "title": "My Five Senses",
+      "emoji": "👃",
+      "level": 2,
+      "pages": [
+        "I see with my eyes — bright stars!",
+        "I hear with my ears — birds chirp.",
+        "I smell flowers, taste mango, touch soft fur.",
+        "Five senses help me explore the world!"
+      ],
+      "words": 28,
+      "new_in_v1_4": true
+    },
+    {
+      "id": "b16",
+      "title": "Kind Words",
+      "emoji": "💬",
+      "level": 2,
+      "pages": [
+        "Mina said, “Please” — door opened.",
+        "She said, “Thank you” — smiles grew.",
+        "Kind words are like warm sun.",
+        "Try today: say please, thank you, sorry."
+      ],
+      "words": 25,
+      "new_in_v1_4": true
+    },
+    {
+      "id": "b17",
+      "title": "The Helpful Robot",
+      "emoji": "🤖",
+      "level": 3,
+      "pages": [
+        "Robo beeped: “Need help?”",
+        "He carried books for the teacher.",
+        "He sorted blocks big to small.",
+        "Friends cheered: “Thank you, Robo!”"
+      ],
+      "words": 27,
+      "new_in_v1_5": true
+    },
+    {
+      "id": "b18",
+      "title": "Counting Stars",
+      "emoji": "⭐",
+      "level": 2,
+      "pages": [
+        "1 star, 2 stars, 3 stars shine.",
+        "Count 10 stars in the night sky.",
+        "Leo counts too — one by one.",
+        "Can you find the North Star? ✨"
+      ],
+      "words": 28,
+      "new_in_v1_5": true
+    },
+    {
+      "id": "b19",
+      "title": "Friendship Garden",
+      "emoji": "🌻",
+      "level": 2,
+      "pages": [
+        "Aya planted seeds with Sam.",
+        "They watered every sunny day.",
+        "Flowers bloomed — yellow and red!",
+        "Sharing makes gardens grow. 🌼"
+      ],
+      "words": 26,
+      "new_in_v1_5": true
+    },
+    {
+      "id": "b20",
+      "title": "Bedtime Routine",
+      "emoji": "🌙",
+      "level": 1,
+      "pages": [
+        "Brush teeth — scrub, scrub!",
+        "Read a short story with Mama.",
+        "Breathe slow — eyes close.",
+        "Good night, stars. Sleep tight! 😴"
+      ],
+      "words": 25,
+      "new_in_v1_5": true
+    },
+    {
+      "id": "b21",
+      "title": "Farm Morning",
+      "emoji": "🚜",
+      "level": 2,
+      "pages": [
+        "Rooster crows — cock-a-doodle-doo!",
+        "Farmer feeds cows and hens.",
+        "Tractor puffs, fields are green.",
+        "Farm friends work together. 🌽"
+      ],
+      "words": 28,
+      "new_in_v1_6": true
+    },
+    {
+      "id": "b22",
+      "title": "City Helpers",
+      "emoji": "🏙️",
+      "level": 3,
+      "pages": [
+        "Bus driver rings — ding ding!",
+        "Builder lifts beams high.",
+        "Mail carrier brings letters.",
+        "City buzzes — everyone helps!"
+      ],
+      "words": 27,
+      "new_in_v1_6": true
+    },
+    {
+      "id": "b23",
+      "title": "The Brave Little Turtle",
+      "emoji": "🐢",
+      "level": 3,
+      "pages": [
+        "Tula turtle was slow but steady.",
+        "Friends raced ahead — she kept going.",
+        "At the hill, she helped a beetle.",
+        "Slow and kind wins the day. 💚"
+      ],
+      "words": 29,
+      "new_in_v1_6": true
+    },
+    {
+      "id": "b24",
+      "title": "Weather Wonders",
+      "emoji": "🌈",
+      "level": 2,
+      "pages": [
+        "Sunny, rainy, cloudy, snowy!",
+        "Dress up — boots or hat?",
+        "Seasons turn — spring to winter.",
+        "What’s the weather today? ⛅"
+      ],
+      "words": 26,
+      "new_in_v1_6": true
+    }
+  ],
+  "meta": {
+    "total": 24,
+    "read_along": true,
+    "offline": true,
+    "avg_words_per_book": 26,
+    "illstration_style": "flat, warm, high-contrast, blue-light-safe",
+    "new_in_v1_3": 4,
+    "new_in_v1_4": 4,
+    "new_in_v1_5": 4,
+    "new_in_v1_6": 4
+  }
+}

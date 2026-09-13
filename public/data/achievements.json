@@ -1,0 +1,109 @@
+{
+  "version": "1.6.0",
+  "note": "All achievements are earned offline via activity_progress mastery (3 correct = mastery). No scores shown to child — only stickers/leaves.",
+  "achievements": [
+    {
+      "id": "first_steps",
+      "title": "First Steps",
+      "emoji": "🌟",
+      "desc": "Complete first activity",
+      "criteria": "1 activity done"
+    },
+    {
+      "id": "count_master",
+      "title": "Counter",
+      "emoji": "🔢",
+      "desc": "Master 3 counting activities",
+      "criteria": "3 mastered in count_play/math_magic"
+    },
+    {
+      "id": "reader",
+      "title": "Little Reader",
+      "emoji": "📚",
+      "desc": "Finish 4 story books",
+      "criteria": "4 story_time books finished"
+    },
+    {
+      "id": "shape_hunter",
+      "title": "Shape Hunter",
+      "emoji": "🔷",
+      "desc": "Find 5 hidden shapes",
+      "criteria": "5 mastered in shape_detective"
+    },
+    {
+      "id": "kind_heart",
+      "title": "Kind Heart",
+      "emoji": "💛",
+      "desc": "Practise 5 kind-word or emotions activities",
+      "criteria": "5 mastered in emotions/helpers"
+    },
+    {
+      "id": "ocean_explorer",
+      "title": "Ocean Explorer",
+      "emoji": "🐠",
+      "desc": "Explore Ocean Friends world",
+      "criteria": "3 mastered in ocean_friends"
+    },
+    {
+      "id": "space_cadet",
+      "title": "Space Cadet",
+      "emoji": "🚀",
+      "desc": "Explore Space Quest world",
+      "criteria": "3 mastered in space_quest"
+    },
+    {
+      "id": "sticker_collector",
+      "title": "Sticker Collector",
+      "emoji": "🏆",
+      "desc": "Unlock 8 stickers",
+      "criteria": "8 stickers in reward_state"
+    },
+    {
+      "id": "eye_safe",
+      "title": "Eye-Safe Star",
+      "emoji": "👁️",
+      "desc": "Take 5 eye breaks",
+      "criteria": "eye_breaks_taken >=5"
+    },
+    {
+      "id": "print_friend",
+      "title": "Print Friend",
+      "emoji": "🖨️",
+      "desc": "Export first PDF",
+      "criteria": "print_history length >=1"
+    },
+    {
+      "id": "farm_star",
+      "title": "Farm Star",
+      "emoji": "🚜",
+      "desc": "Explore Farm Friends",
+      "criteria": "3 mastered in farm_friends"
+    },
+    {
+      "id": "city_builder",
+      "title": "City Builder",
+      "emoji": "🏙️",
+      "desc": "Explore City Builders",
+      "criteria": "3 mastered in city_builders"
+    },
+    {
+      "id": "weather_watcher",
+      "title": "Weather Watcher",
+      "emoji": "⛅",
+      "desc": "Check weather 3 days",
+      "criteria": "3 weather activities"
+    },
+    {
+      "id": "turtle_trail",
+      "title": "Steady Turtle",
+      "emoji": "🐢",
+      "desc": "Finish 2 sequence trails",
+      "criteria": "2 sequence mastered"
+    }
+  ],
+  "meta": {
+    "total": 14,
+    "offline": true,
+    "ceremony": "sticker + certificate"
+  }
+}

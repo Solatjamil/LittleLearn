@@ -1,0 +1,5 @@
+# LittleLearn — crawl all, disallow parent gated
+User-agent: *
+Allow: /
+Disallow: /#parent
+Sitemap: https://littlelearn.app/sitemap.xml

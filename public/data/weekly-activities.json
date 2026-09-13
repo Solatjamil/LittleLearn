@@ -1,0 +1,185 @@
+{
+  "version": "1.6.0",
+  "note": "Structured 5-day plan for ages 4-5 — mixes literacy, numeracy, nature, life, creative. All link to worksheet PDFs.",
+  "week": "2026-W37-W38",
+  "plan": [
+    {
+      "day": "Monday",
+      "focus": "Literacy",
+      "worlds": [
+        "abc_land",
+        "rhyme_time"
+      ],
+      "activity_ids": [
+        "abc_land_A_trace_arrow-guided_001",
+        "rhyme_time_at_hat_match_007"
+      ],
+      "printables": [
+        "t1",
+        "t12"
+      ],
+      "parent_tip": "Read each letter aloud, trace with finger"
+    },
+    {
+      "day": "Tuesday",
+      "focus": "Numeracy",
+      "worlds": [
+        "count_play",
+        "math_magic"
+      ],
+      "activity_ids": [
+        "count_play_apple_3_grid_tap_042",
+        "math_magic_pattern_ab_blocks_018"
+      ],
+      "printables": [
+        "t2",
+        "t11"
+      ],
+      "parent_tip": "Count real objects — apples, stairs, buttons"
+    },
+    {
+      "day": "Wednesday",
+      "focus": "Nature",
+      "worlds": [
+        "animal_kingdom",
+        "ocean_friends"
+      ],
+      "activity_ids": [
+        "animal_kingdom_lion_roar_savanna_008",
+        "ocean_friends_dolphin_click_reef_101"
+      ],
+      "printables": [
+        "t4",
+        "t9"
+      ],
+      "parent_tip": "Make animal sounds together — roar, chirp, click"
+    },
+    {
+      "day": "Thursday",
+      "focus": "Life Skills",
+      "worlds": [
+        "emotions",
+        "helpers"
+      ],
+      "activity_ids": [
+        "emotions_sad_hug_scenario_009",
+        "helpers_doctor_stethoscope_match_006"
+      ],
+      "printables": [
+        "t10",
+        "t14"
+      ],
+      "parent_tip": "Talk about feelings: When do you feel proud?"
+    },
+    {
+      "day": "Friday",
+      "focus": "Creative + Review",
+      "worlds": [
+        "color_splash",
+        "shape_detective",
+        "memory_match"
+      ],
+      "activity_ids": [
+        "color_splash_rainbow_tap_fill_004",
+        "shape_detective_hexagon_beach_by_shape_117",
+        "memory_match_animals_8_grid_019"
+      ],
+      "printables": [
+        "t3",
+        "t6",
+        "t13"
+      ],
+      "parent_tip": "Color, hunt shapes, then print weekend pack"
+    },
+    {
+      "day": "Monday-W2",
+      "focus": "Nature + Science",
+      "worlds": [
+        "farm_friends",
+        "ocean_friends"
+      ],
+      "activity_ids": [
+        "farm_friends_tractor_sort_field_201",
+        "ocean_friends_turtle_slow_203"
+      ],
+      "printables": [
+        "t21",
+        "t13"
+      ],
+      "parent_tip": "Talk about farm vs ocean — big vs small"
+    },
+    {
+      "day": "Tuesday-W2",
+      "focus": "City & Helpers",
+      "worlds": [
+        "city_builders",
+        "helpers"
+      ],
+      "activity_ids": [
+        "city_builders_bus_match_city_202",
+        "helpers_doctor_stethoscope_match_006"
+      ],
+      "printables": [
+        "t22",
+        "t4"
+      ],
+      "parent_tip": "Spot helpers in town — bus driver, builder"
+    },
+    {
+      "day": "Wednesday-W2",
+      "focus": "Creative",
+      "worlds": [
+        "color_splash",
+        "music"
+      ],
+      "activity_ids": [
+        "color_splash_rainbow_tap_fill_004",
+        "music_notes_trace_fast_206"
+      ],
+      "printables": [
+        "t20",
+        "t19"
+      ],
+      "parent_tip": "Color, then clap a rhythm together"
+    },
+    {
+      "day": "Thursday-W2",
+      "focus": "Literacy Review",
+      "worlds": [
+        "story_time",
+        "rhyme_time"
+      ],
+      "activity_ids": [
+        "story_time_leo_star_page2_readalong_002",
+        "rhyme_time_un_sun_bun_103"
+      ],
+      "printables": [
+        "t12",
+        "t15"
+      ],
+      "parent_tip": "Read a new book (b23 Brave Turtle) aloud"
+    },
+    {
+      "day": "Friday-W2",
+      "focus": "Math & Memory",
+      "worlds": [
+        "count_play",
+        "memory_match"
+      ],
+      "activity_ids": [
+        "count_play_apple_3_grid_tap_042",
+        "memory_match_animals_8_grid_019"
+      ],
+      "printables": [
+        "t17",
+        "t11"
+      ],
+      "parent_tip": "Make 10 with fingers, then play memory"
+    }
+  ],
+  "meta": {
+    "offline": true,
+    "print_all": "LittleLearn-Two-Weeks-2026.pdf",
+    "total_days": 10
+  }
+}

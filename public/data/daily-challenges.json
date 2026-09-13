@@ -1,0 +1,123 @@
+{
+  "version": "1.6.0",
+  "note": "1 challenge per day — 3-5 min, offline, ties to Learning Path level. Auto-unlocks at midnight local.",
+  "challenges": [
+    {
+      "day": 1,
+      "title": "Find 3 Circles",
+      "emoji": "🔵",
+      "module_id": "shape_detective",
+      "prompt": "How many round things at home?",
+      "reward": "🔷 Shape Leaf"
+    },
+    {
+      "day": 2,
+      "title": "Sound Hunt",
+      "emoji": "🦁",
+      "module_id": "animal_kingdom",
+      "prompt": "Roar like a lion, chirp like a bird — can family guess?",
+      "reward": "🦁 Animal Leaf"
+    },
+    {
+      "day": 3,
+      "title": "Kind Word Day",
+      "emoji": "💬",
+      "module_id": "emotions",
+      "prompt": "Say please / thank you 3 times today",
+      "reward": "💛 Kind Leaf"
+    },
+    {
+      "day": 4,
+      "title": "Count to 10",
+      "emoji": "🔢",
+      "module_id": "count_play",
+      "prompt": "Count stairs or blocks to 10 together",
+      "reward": "🔢 Number Leaf"
+    },
+    {
+      "day": 5,
+      "title": "Color Splash",
+      "emoji": "🎨",
+      "module_id": "color_splash",
+      "prompt": "Color a rainbow with 6 crayons",
+      "reward": "🎨 Color Leaf"
+    },
+    {
+      "day": 6,
+      "title": "Story Night",
+      "emoji": "📚",
+      "module_id": "story_time",
+      "prompt": "Read one book aloud — ask ‘What would you do?’",
+      "reward": "📚 Story Leaf"
+    },
+    {
+      "day": 7,
+      "title": "Ocean Peek",
+      "emoji": "🐠",
+      "module_id": "ocean_friends",
+      "prompt": "Name 3 sea creatures and their sounds",
+      "reward": "🐠 Ocean Leaf"
+    },
+    {
+      "day": 8,
+      "title": "Space Sort",
+      "emoji": "🚀",
+      "module_id": "space_quest",
+      "prompt": "Sort toys big → small like planets",
+      "reward": "🚀 Space Leaf"
+    },
+    {
+      "day": 9,
+      "title": "Five Senses",
+      "emoji": "👃",
+      "module_id": "body_senses",
+      "prompt": "Smell, hear, see, touch, taste — one each",
+      "reward": "👃 Senses Leaf"
+    },
+    {
+      "day": 10,
+      "title": "Rhyme Time",
+      "emoji": "🎵",
+      "module_id": "rhyme_time",
+      "prompt": "Find 2 rhymes for ‘cat’ (hat, mat!)",
+      "reward": "🎵 Rhyme Leaf"
+    },
+    {
+      "day": 11,
+      "title": "Farm Sounds",
+      "emoji": "🚜",
+      "module_id": "farm_friends",
+      "prompt": "Moo like a cow, baa like a sheep",
+      "reward": "🚜 Farm Leaf"
+    },
+    {
+      "day": 12,
+      "title": "City Trip",
+      "emoji": "🏙️",
+      "module_id": "city_builders",
+      "prompt": "Name 3 city helpers on the way to shop",
+      "reward": "🏙️ City Leaf"
+    },
+    {
+      "day": 13,
+      "title": "Brave Steps",
+      "emoji": "🐢",
+      "module_id": "sequence",
+      "prompt": "Do one thing slowly and kindly today",
+      "reward": "🐢 Brave Leaf"
+    },
+    {
+      "day": 14,
+      "title": "Weather Watch",
+      "emoji": "⛅",
+      "module_id": "weather",
+      "prompt": "Look outside — draw today’s weather",
+      "reward": "⛅ Weather Leaf"
+    }
+  ],
+  "meta": {
+    "total": 14,
+    "offline": true,
+    "reset": "midnight_local"
+  }
+}
